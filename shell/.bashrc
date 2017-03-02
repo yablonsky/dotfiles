@@ -14,10 +14,12 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+# Put your fun stuff here.
+
+export EDITOR=/usr/bin/vim
 
 Xterm() {
     xinit "$@" -- -nocursor
 }
 
-# Put your fun stuff here.
 source ~/.bash_alias
