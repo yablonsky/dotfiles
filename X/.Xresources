@@ -1,8 +1,18 @@
 xterm*termName: xterm-256color
-xterm*vt100*geometry: 318x91+0+2
+!1024x768
+!xterm*vt100*geometry: 170x59+1+0
+!xterm*internalBorder: 0
+
+1280x960
+xterm*vt100*geometry: 212x73+0+2
+xterm*internalBorder: 3
+
+!1920x1200
+!xterm*vt100*geometry: 318x91+0+2
+!xterm*internalBorder: 5
+
 xterm*loginShell: true
 xterm*saveLines:10000
-xterm*internalBorder: 5
 !xterm*allowBoldFonts: False
 
 ! special
