@@ -1,6 +1,8 @@
 #! /bin/bash
 
 ln -s `pwd`/shell/.bashrc "$HOME/.bashrc"
+ln -s `pwd`/shell/.inputrc "$HOME/.inputrc"
+ln -s `pwd`/shell/.editrc "$HOME/.editrc"
 
 ln -s `pwd`/tmux/.tmux.conf "$HOME/.tmux.conf"
 
@@ -11,4 +13,4 @@ ln -s `pwd`/vim/settings.vim "$HOME/.vim/settings.vim"
 ln -s -T `pwd`/vim/settings "$HOME/.vim/settings"
 
 ln -s `pwd`/X/.xinitrc "$HOME/.xinitrc"
-ln -s `pwd`/X/.Xresources "$HOME/.Xresorces"
+ln -s `pwd`/X/.Xresources "$HOME/.Xresources"

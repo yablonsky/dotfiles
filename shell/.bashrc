@@ -22,4 +22,5 @@ Xterm() {
     xinit "$@" -- -nocursor
 }
 
-source ~/.bash_alias
+[ -f "$HOME/.bash_vars.sh" ] && source "$HOME/.bash_vars.sh"
+[ -f "$HOME/.bash_alias.sh" ] && source "$HOME/.bash_alias.sh"
