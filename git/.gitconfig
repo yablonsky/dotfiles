@@ -1,7 +1,0 @@
-# This is Git's per-user configuration file.
-[user]
-	email = andriy@pelotoncycle.com
-	name = Andriy Yablonskyy
-[alias]
-	co = checkout
-	br = branch

@@ -2,8 +2,6 @@
 
 ln -s `pwd`/shell/.bashrc "$HOME/.bashrc"
 
-ln -s `pwd`/git/.gitconfig "$HOME/.gitconfig"
-
 ln -s `pwd`/tmux/.tmux.conf "$HOME/.tmux.conf"
 
 ln -s `pwd`/vim/.vimrc "$HOME/.vimrc"
