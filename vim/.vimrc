@@ -111,15 +111,5 @@ set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
-set encoding=utf-8
-set cursorline
-colorscheme onedark
-let g:airline_theme='onedark'
-set background=dark
-"set termguicolors
-"set t_ut=
-"set t_Co=16
-"let g:onedark_termcolors=16
-
 " ================ Custom Settings ========================
 so ~/.vim/settings.vim
