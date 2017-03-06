@@ -1,4 +1,6 @@
-xterm*termName: xterm-256color
+xterm*termName: screen-256color
+!xterm*termName: xterm-256color
+
 !1024x768
 !xterm*vt100*geometry: 170x59+1+0
 !xterm*internalBorder: 0
@@ -15,6 +17,7 @@ xterm*loginShell: true
 xterm*saveLines:10000
 !xterm*allowBoldFonts: False
 
+! OneDark colorscheme
 ! special
 *.foreground:   #abb2bf
 *.background:   #282c34
