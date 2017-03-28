@@ -5,7 +5,6 @@ ln -s `pwd`/shell/.inputrc "$HOME/.inputrc"
 ln -s `pwd`/shell/.editrc "$HOME/.editrc"
 
 ln -s `pwd`/tmux/.tmux.conf "$HOME/.tmux.conf"
-ln -s `pwd`/tmux/.tmux.conf.plugins "$HOME/.tmux.conf.plugins"
 
 ln -s `pwd`/vim/.vimrc "$HOME/.vimrc"
 [ -d "$HOME/.vim" ] || mkdir "$HOME/.vim"
