@@ -36,6 +36,7 @@ Plugin 'VundleVim/Vundle.vim'
 "runtime project.vundle
 "runtime vim-improvements.vundle
 
+Plugin 'mildred/vim-bufmru'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-sensible'
