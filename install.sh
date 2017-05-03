@@ -1,16 +1,24 @@
 #! /bin/bash
 
-ln -s `pwd`/shell/.bashrc "$HOME/.bashrc"
-ln -s `pwd`/shell/.inputrc "$HOME/.inputrc"
-ln -s `pwd`/shell/.editrc "$HOME/.editrc"
+DOTFILES=$(pwd)
+ln -s "$DOTFILES/shell/.bashrc" "$HOME/.bashrc"
+ln -s "$DOTFILES/shell/.inputrc" "$HOME/.inputrc"
+ln -s "$DOTFILES/shell/.editrc" "$HOME/.editrc"
 
-ln -s `pwd`/tmux/.tmux.conf "$HOME/.tmux.conf"
+ln -s "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
+if [ ! -d "$HOME/.tmux/plugins" ]; then
+    mkdir -p "$HOME/.tmux/plugins"
+    git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+    echo "Don't for forget to install tmux plugins (prefix + I)"
+fi
 
-ln -s `pwd`/vim/.vimrc "$HOME/.vimrc"
-[ -d "$HOME/.vim" ] || mkdir "$HOME/.vim"
-ln -s `pwd`/vim/vundles.vim "$HOME/.vim/vundles.vim"
-ln -s `pwd`/vim/settings.vim "$HOME/.vim/settings.vim"
-ln -s -T `pwd`/vim/settings "$HOME/.vim/settings"
+ln -s "$DOTFILES/vim/.vimrc" "$HOME/.vimrc"
+if [ ! -d "$HOME/.vim" ]; then
+    mkdir "$HOME/.vim"
+    ln -s "$DOTFILES/vim/vundles.vim" "$HOME/.vim/vundles.vim"
+    ln -s "$DOTFILES/vim/settings.vim" "$HOME/.vim/settings.vim"
+    ln -s -T "$DOTFILES/vim/settings" "$HOME/.vim/settings"
+fi
 
-ln -s `pwd`/X/.xinitrc "$HOME/.xinitrc"
-ln -s `pwd`/X/.Xresources "$HOME/.Xresources"
+ln -s "$DOTFILES/X/.xinitrc" "$HOME/.xinitrc"
+ln -s "$DOTFILES/X/.Xresources" "$HOME/.Xresources"
