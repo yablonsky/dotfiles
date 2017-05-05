@@ -13,3 +13,8 @@ imap <A-n> <Esc>:BufMRUPrev<CR>
 imap <A-p> <Esc>:BufMRUNext<CR>
 map <A-n> :BufMRUPrev<CR>
 map <A-p> :BufMRUNext<CR>
+
+"YouCompleteMe
+nnoremap <A-d> :YcmCompleter GoTo<CR>
+nnoremap <A-g> :YcmCompleter GoToDeclaration<CR>
+nnoremap <A-v> :YcmCompleter GoToReferences<CR>
