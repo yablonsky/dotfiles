@@ -1,5 +1,7 @@
 "General
 nnoremap <A-q> <C-W><C-Q>
+nnoremap <A-w> <Esc>:w<CR>
+nnoremap <A-x> <Esc>:x<CR>
 nnoremap <C-X> <Esc>:bd<CR>
 
 "Navigation
