@@ -20,7 +20,7 @@ if [ ! -d "$HOME/.vim" ]; then
     ln -s "$DOTFILES/vim/settings.vim" "$HOME/.vim/settings.vim"
     ln -s -T "$DOTFILES/vim/settings" "$HOME/.vim/settings"
     vim +PluginInstall +qall
+    cd ${HOME}/.vim/bundle/YouCompleteMe
+    ./install.py --clang-completer
+    cd ${HOME}
 fi
-
-ln -sf "$DOTFILES/X/.xinitrc" "$HOME/.xinitrc"
-ln -sf "$DOTFILES/X/.Xresources" "$HOME/.Xresources"
