@@ -21,3 +21,5 @@ map p :BufMRUNext<CR>
 nnoremap d :YcmCompleter GoTo<CR>
 nnoremap g :YcmCompleter GoToDeclaration<CR>
 nnoremap v :YcmCompleter GoToReferences<CR>
+
+set timeout timeoutlen=50
