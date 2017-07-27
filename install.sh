@@ -23,4 +23,5 @@ if [ ! -d "$HOME/.vim" ]; then
     cd ${HOME}/.vim/bundle/YouCompleteMe
     ./install.py --clang-completer
     cd ${HOME}
+    ln -s -T "$DOTFILES/vim/ftplugin" "$HOME/.vim/ftplugin"
 fi
