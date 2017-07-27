@@ -1,6 +1,6 @@
 "General
-"nnoremap q <C-W><C-Q>
-nnoremap q <Esc>:qa<CR>
+nnoremap q <C-W><C-Q>
+nnoremap Q <Esc>:qa<CR>
 nnoremap s <Esc>:w<CR>
 nnoremap x <Esc>:x<CR>
 nnoremap <C-X> <Esc>:bd<CR>
@@ -22,4 +22,4 @@ nnoremap d :YcmCompleter GoTo<CR>
 nnoremap g :YcmCompleter GoToDeclaration<CR>
 nnoremap v :YcmCompleter GoToReferences<CR>
 
-set timeout timeoutlen=50
+set ttimeout ttimeoutlen=50
