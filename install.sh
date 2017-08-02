@@ -4,6 +4,7 @@ DOTFILES=$(pwd)
 ln -sf "$DOTFILES/shell/.bashrc" "$HOME/.bashrc"
 ln -sf "$DOTFILES/shell/.inputrc" "$HOME/.inputrc"
 ln -sf "$DOTFILES/shell/.editrc" "$HOME/.editrc"
+ln -s -T "$DOTFILES/git" "$HOME/.git"
 
 ln -sf "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 if [ ! -d "$HOME/.tmux/plugins" ]; then
