@@ -18,16 +18,9 @@ fi
 
 export EDITOR=/usr/bin/vim
 
-if [[ ! $TERM =~ "screen" ]] && [ -z $TMUX ]; then
-    WHOAMI=$(whoami)
-    if tmux has-session -t $WHOAMI 2>/dev/null; then
-        exec tmux -2 attach-session -t $WHOAMI
-    else
-        exec tmux -2 new-session -s $WHOAMI
-    fi
-fi
+source ~/bash-powerline/bash-powerline.sh
 
-export PROMPT_COMMAND=set_prompt
+# export PROMPT_COMMAND=set_prompt
 
 set_prompt() {
     local ex=$?
@@ -40,9 +33,9 @@ set_prompt() {
     local red='\e[1;31m'
     local green='\e[1;32m'
     local blue='\e[1;34m'
-    local reset='\e[0m'
     local suffix=''
     local color=$blue
+    readonly RESET="\[$(tput sgr0)\]"
 
     [[ "$ex" -ne 0 ]] && color=$red && suffix=" > $ex"
 
@@ -51,3 +44,12 @@ set_prompt() {
 
 [ -f "$HOME/.bash_vars.sh" ] && source "$HOME/.bash_vars.sh"
 [ -f "$HOME/.bash_alias.sh" ] && source "$HOME/.bash_alias.sh"
+
+if [[ ! $TERM =~ "screen" ]] && [ -z $TMUX ]; then
+    WHOAMI=$(whoami)
+    if tmux has-session -t $WHOAMI 2>/dev/null; then
+        exec tmux -2 attach-session -t $WHOAMI
+    else
+        exec tmux -2 new-session -s $WHOAMI
+    fi
+fi
