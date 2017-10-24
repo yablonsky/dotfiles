@@ -56,6 +56,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'joshdick/onedark.vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'kh3phr3n/python-syntax'
+"Plugin 'hdima/python-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
