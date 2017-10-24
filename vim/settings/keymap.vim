@@ -23,3 +23,5 @@ nnoremap g :YcmCompleter GoToDeclaration<CR>
 nnoremap v :YcmCompleter GoToReferences<CR>
 
 set ttimeout ttimeoutlen=50
+
+map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
