@@ -64,10 +64,6 @@ set softtabstop=4
 set tabstop=4
 set expandtab
 
-" Auto indent pasted text
-"nnoremap p p=`]<C-o>
-"nnoremap P P=`]<C-o>
-
 filetype plugin on
 filetype indent on
 
