@@ -16,31 +16,10 @@ fi
 
 # Put your fun stuff here.
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
 
 source ~/bash-powerline/bash-powerline.sh
-
-# export PROMPT_COMMAND=set_prompt
-
-set_prompt() {
-    local ex=$?
-    #----------------------------------------------------------------------------#
-    # Bash text colour specification:  \e[<STYLE>;<COLOUR>m
-    # (Note: \e = \033 (oct) = \x1b (hex) = 27 (dec) = "Escape")
-    # Styles:  0=normal, 1=bold, 2=dimmed, 4=underlined, 7=highlighted
-    # Colours: 31=red, 32=green, 33=yellow, 34=blue, 35=purple, 36=cyan, 37=white
-    #----------------------------------------------------------------------------#
-    local red='\e[1;31m'
-    local green='\e[1;32m'
-    local blue='\e[1;34m'
-    local suffix=''
-    local color=$blue
-    readonly RESET="\[$(tput sgr0)\]"
-
-    [[ "$ex" -ne 0 ]] && color=$red && suffix=" > $ex"
-
-    PS1="\[$green\][\A] \[$color\][\u@\h \w$suffix]\[$(tput sgr0)\]\[$reset\] "
-}
 
 [ -f "$HOME/.bash_vars.sh" ] && source "$HOME/.bash_vars.sh"
 [ -f "$HOME/.bash_alias.sh" ] && source "$HOME/.bash_alias.sh"
