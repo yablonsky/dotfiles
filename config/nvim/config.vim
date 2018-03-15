@@ -11,8 +11,6 @@ set autoread                    "Reload files changed outside vim
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-syntax on
-
 " ================ Turn Off Swap Files ==============
 set noswapfile
 set nobackup
@@ -53,6 +51,7 @@ set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.pyc
 
 "
 " ================ Scrolling ========================
