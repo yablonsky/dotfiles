@@ -4,7 +4,7 @@ set encoding=utf-8
 set splitbelow
 set splitright
 set termguicolors
-set lazyredraw
+"set lazyredraw
 colorscheme badwolf
 "set background=dark
 
