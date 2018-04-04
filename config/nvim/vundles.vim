@@ -15,8 +15,9 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-commentary'
 Plugin 'svermeulen/vim-easyclip'
 
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'vim-syntastic/syntastic'
+"Plugin 'jmcantrell/vim-virtualenv'
+"Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'

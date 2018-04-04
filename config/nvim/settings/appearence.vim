@@ -37,4 +37,5 @@ let g:rainbow_conf = {
 
 " vim-airline
 let g:airline_theme='badwolf'
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
