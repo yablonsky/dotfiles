@@ -3,6 +3,7 @@
 " fugitive buffers. This prevents this from becomming an issue:
 
 autocmd BufReadPost fugitive://* set bufhidden=delete
-if exists(":Gpushu") == 0
-    command Gpushu :execute "Gpush origin " . fugitive#head()
+
+if exists(":Gbru") == 0
+    command Gbru :execute "Git branch -u origin/" . fugitive#head() . " " . fugitive#head() 
 endif
