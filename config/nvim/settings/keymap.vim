@@ -12,15 +12,14 @@ nnoremap <A-l> <C-W><C-L>
 nnoremap <A-h> <C-W><C-H>
 
 "BufMRU
-nnoremap [b :BufMRUPrev<CR>
-nnoremap ]b :BufMRUNext<CR>
-nnoremap <A-b> :BufMRUCommit<CR>
+"override unimpaired keybindings
+autocmd VimEnter * nnoremap [b :BufMRUPrev<CR>
+autocmd VimEnter * nnoremap ]b :BufMRUNext<CR>
+nnoremap <leader>b :BufMRUCommit<CR>
+
+nnoremap <leader>G :Gstatus<CR>
 
 "YouCompleteMe
 "nnoremap d :YcmCompleter GoTo<CR>
 "nnoremap <C-b> :YcmCompleter GoToDeclaration<CR>
 "nnoremap <C-h> :YcmCompleter GoToReferences<CR>
-
-"set ttimeout ttimeoutlen=50
-
-"map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
