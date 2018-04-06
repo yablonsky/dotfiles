@@ -4,6 +4,6 @@
 
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
-if exists(":Gbru") == 0
-    command Gbru :execute "Git branch -u origin/" . fugitive#head() . " " . fugitive#head() 
+if exists(":Gpushu") == 0
+    command Gpushu :execute "Gpush -u origin " . fugitive#head()
 endif
