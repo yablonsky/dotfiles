@@ -16,10 +16,11 @@ Plugin 'tpope/vim-commentary'
 Plugin 'svermeulen/vim-easyclip'
 
 "Plugin 'vim-syntastic/syntastic'
-Plugin 'jmcantrell/vim-virtualenv'
+"Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'w0rp/ale'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'ervandew/supertab'
+"Plugin 'zchee/deoplete-jedi'
+"Plugin 'ervandew/supertab'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
