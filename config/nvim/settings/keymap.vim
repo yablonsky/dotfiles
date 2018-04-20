@@ -13,8 +13,8 @@ nnoremap <A-h> <C-W><C-H>
 
 "BufMRU
 "override unimpaired keybindings
-autocmd VimEnter * nnoremap [b :BufMRUPrev<CR>
-autocmd VimEnter * nnoremap ]b :BufMRUNext<CR>
+autocmd VimEnter * nnoremap [b :BufMRUNext<CR>
+autocmd VimEnter * nnoremap ]b :BufMRUPrev<CR>
 nnoremap <leader>b :BufMRUCommit<CR>
 
 nnoremap <leader>G :Gstatus<CR>
