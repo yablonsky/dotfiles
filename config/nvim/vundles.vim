@@ -19,6 +19,7 @@ Plugin 'svermeulen/vim-easyclip'
 "Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'w0rp/ale'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'janko-m/vim-test'
 "Plugin 'zchee/deoplete-jedi'
 "Plugin 'ervandew/supertab'
 
