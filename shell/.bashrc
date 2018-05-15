@@ -19,6 +19,7 @@ fi
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 
+
 source ~/bash-powerline/bash-powerline.sh
 
 [ -f "$HOME/.bash_vars.sh" ] && source "$HOME/.bash_vars.sh"
@@ -32,3 +33,7 @@ if [[ ! $TERM =~ "screen" ]] && [ -z $TMUX ]; then
         exec tmux -2 new-session -s $WHOAMI
     fi
 fi
+
+ext_ip() {
+    echo $(ip -br -4 addr | grep UP | awk '{split($3,s,"/"); print s[1]}')
+}
