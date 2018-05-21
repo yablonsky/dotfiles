@@ -6,10 +6,15 @@
 "nnoremap <C-X> <Esc>:bd<CR>
 
 "Navigation
-nnoremap <A-j> <C-W><C-J>
-nnoremap <A-k> <C-W><C-K>
-nnoremap <A-l> <C-W><C-L>
-nnoremap <A-h> <C-W><C-H>
+nnoremap <A-j> <c-w>j
+nnoremap <A-k> <c-w>k
+nnoremap <A-l> <c-w>l
+nnoremap <A-h> <c-w>h
+tnoremap <A-[> <C-\><C-n>
+tnoremap <A-j> <c-\><c-n><c-w>j
+tnoremap <A-k> <c-\><c-n><c-w>k
+tnoremap <A-l> <c-\><c-n><c-w>l
+tnoremap <A-h> <c-\><c-n><c-w>h
 
 "BufMRU
 "override unimpaired keybindings
@@ -17,16 +22,29 @@ autocmd VimEnter * nnoremap [b :BufMRUNext<CR>
 autocmd VimEnter * nnoremap ]b :BufMRUPrev<CR>
 nnoremap <leader>b :BufMRUCommit<CR>
 
-nnoremap <leader>G :Gstatus<CR>
-
 "YouCompleteMe
 "nnoremap d :YcmCompleter GoTo<CR>
 "nnoremap <C-b> :YcmCompleter GoToDeclaration<CR>
 "nnoremap <C-h> :YcmCompleter GoToReferences<CR>
 
 "vim-test
-nmap <silent> t<C-n> :TestNearest<CR> " t Ctrl+n
-nmap <silent> t<C-f> :TestFile<CR>    " t Ctrl+f
-nmap <silent> t<C-s> :TestSuite<CR>   " t Ctrl+s
-nmap <silent> t<C-l> :TestLast<CR>    " t Ctrl+l
-nmap <silent> t<C-g> :TestVisit<CR>   " t Ctrl+g
+nmap <leader>t? :map <leader>t<CR>
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tg :TestVisit<CR>
+
+" Fugitive mapping
+nmap <leader>g? :map <leader>g<CR>
+nmap <leader>gb :Gblame<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>gd :Gdiff<cr>
+nmap <leader>gg :Ggrep
+nmap <leader>gl :Glog<cr>
+nmap <leader>gf :Gfetch<cr>
+nmap <leader>gp :Gpull<cr>
+nmap <leader>gu :Gpush<cr>
+nmap <leader>gU :Gpushu<cr>
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gw :Gbrowse<cr>
