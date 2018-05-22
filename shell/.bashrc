@@ -42,5 +42,5 @@ ext_ip() {
 }
 
 if [ -z $NVIM_LISTEN_ADDRESS ]; then
-    nvim +te
+    nvim -i NONE +te
 fi
