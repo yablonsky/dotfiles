@@ -41,6 +41,8 @@ ext_ip() {
     echo $(ip -br -4 addr | grep UP | awk '{split($3,s,"/"); print s[1]}')
 }
 
-if [ -z $NVIM_LISTEN_ADDRESS ]; then
-    nvim -i NONE +te
-fi
+#if [ -z $NVIM_LISTEN_ADDRESS ]; then
+#    nvim -i NONE +te
+#fi
+
+start_tmux
