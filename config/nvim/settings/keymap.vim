@@ -37,6 +37,9 @@ nmap <silent> <leader>tg :TestVisit<CR>
 
 " Fugitive mapping
 nmap <leader>g? :map <leader>g<CR>
+nmap <leader>ge :Gedit<cr>
+nmap <leader>gr :Gread<cr>
+nmap <leader>gw :Gwrite<cr>
 nmap <leader>gb :Gblame<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>gd :Gdiff<cr>
@@ -47,4 +50,4 @@ nmap <leader>gp :Gpull<cr>
 nmap <leader>gu :Gpush<cr>
 nmap <leader>gU :Gpushu<cr>
 nmap <leader>gs :Gstatus<cr>
-nmap <leader>gw :Gbrowse<cr>
+nmap <leader>gW :Gbrowse<cr>
