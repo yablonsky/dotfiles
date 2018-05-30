@@ -15,6 +15,7 @@ tnoremap <A-j> <c-\><c-n><c-w>j
 tnoremap <A-k> <c-\><c-n><c-w>k
 tnoremap <A-l> <c-\><c-n><c-w>l
 tnoremap <A-h> <c-\><c-n><c-w>h
+tnoremap <A-p> <c-\><c-n>pa
 
 "BufMRU
 "override unimpaired keybindings
