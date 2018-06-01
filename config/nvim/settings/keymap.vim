@@ -39,11 +39,13 @@ nmap <silent> <leader>tg :TestVisit<CR>
 nmap <leader>g? :map <leader>g<CR>
 nmap <leader>ge :Gedit<cr>
 nmap <leader>gr :Gread<cr>
+nmap <leader>gR :Gremove<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gb :Gblame<cr>
 nmap <leader>gc :Gcommit<cr>
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gg :Ggrep
+nmap <leader>ggw :Ggrep <cword><cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gf :Gfetch<cr>
 nmap <leader>gp :Gpull<cr>
