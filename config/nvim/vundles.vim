@@ -15,7 +15,6 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-commentary'
 Plugin 'svermeulen/vim-easyclip'
 
-"Plugin 'vim-syntastic/syntastic'
 "Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'w0rp/ale'
 Plugin 'davidhalter/jedi-vim'
