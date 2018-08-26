@@ -4,7 +4,9 @@ DOTFILES=$(pwd)
 ln -sf "$DOTFILES/shell/.bashrc" "$HOME/.bashrc"
 ln -sf "$DOTFILES/shell/.inputrc" "$HOME/.inputrc"
 ln -sf "$DOTFILES/shell/.editrc" "$HOME/.editrc"
-ln -s -T "$DOTFILES/git" "$HOME/.git"
+ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOTFILES/X/.xinitrc" "$HOME/.xinitrc"
+ln -sf "$DOTFILES/X/.Xresources" "$HOME/.Xresources"
 
 curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh
 
@@ -20,4 +22,9 @@ if [ ! -d "$HOME/.config/nvim" ]; then
     mkdir -p "$HOME/.config/nvim/bundle"
     git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.config/nvim/bundle/Vundle.vim"
     nvim +PluginInstall +qa
+fi
+
+if [ ! -d "$HOME/.config/openbox" ]; then
+    mkdir -p "$HOME/.config/openbox"
+    ln -s -T "$DOTFILES/config/openbox" "$HOME/.config/openbox"
 fi
