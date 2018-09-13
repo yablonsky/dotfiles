@@ -43,9 +43,11 @@ nmap <leader>gr :Gread<cr>
 nmap <leader>gR :Gremove<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gb :Gblame<cr>
+nmap <leader>gB :Git co -b 
 nmap <leader>gc :Gcommit<cr>
+nmap <leader>gC :Git co 
 nmap <leader>gd :Gdiff<cr>
-nmap <leader>gg :Ggrep
+nmap <leader>gg :Ggrep 
 nmap <leader>ggw :Ggrep <cword><cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gf :Gfetch<cr>
