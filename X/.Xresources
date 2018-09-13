@@ -1,0 +1,22 @@
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
+URxvt.loginShell: true
+URxvt.depth: 32
+URxvt.foreground: White
+URxvt.background: Black
+URxvt.transparent: true
+URxvt.tintColor: White
+URxvt.shading: 70
+URxvt.saveLines: 10000
+URxvt.cursorBlink: true
+URxvt.scrollBar: off
+URxvt.font: xft:Hack:pixelsize=12:minspace=False, xft:DejaVu Sans:pixelsize=13
+URxvt.colorIT: #87af5f
+URxvt.colorBD: #d7d7d7
+URxvt.colorUL: #87af5f
+
+XTerm.termName: xterm-256color
+XTerm.vt100.renderFont: true

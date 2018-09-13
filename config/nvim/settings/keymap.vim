@@ -52,6 +52,7 @@ nmap <leader>ggw :Ggrep <cword><cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gf :Gfetch<cr>
 nmap <leader>gp :Gpull<cr>
+nmap <leader>gpm :Gpull origin master<cr>
 nmap <leader>gu :Gpush<cr>
 nmap <leader>gU :Gpushu<cr>
 nmap <leader>gs :Gstatus<cr>
