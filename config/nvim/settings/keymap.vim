@@ -5,6 +5,9 @@
 "nnoremap x <Esc>:x<CR>
 "nnoremap <C-X> <Esc>:bd<CR>
 
+nnoremap n nzz
+nnoremap N Nzz
+
 "Navigation
 nnoremap <A-j> <c-w>j
 nnoremap <A-k> <c-w>k

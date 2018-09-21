@@ -5,7 +5,9 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
-set clipboard=unnamed           "Use system register * for yand/delete/paste
+set clipboard=unnamed           "Use system register * for yank/delete/paste
+set backspace=indent,eol,start
+set title
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
