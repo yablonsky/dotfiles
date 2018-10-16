@@ -8,7 +8,6 @@ ln -sf "$DOTFILES/shell/.editrc" "$HOME/.editrc"
 ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 #ln -sf "$DOTFILES/X/.xinitrc" "$HOME/.xinitrc"
 #ln -sf "$DOTFILES/X/.Xresources" "$HOME/.Xresources"
-ln -sf "$DOTFILES/X/.xprofile" "$HOME/.xprofile"
 
 if [ ! -f "$HOME/.bash-powerline.sh" ]; then
     echo "Installing Bash-Powerline"
