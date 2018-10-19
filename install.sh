@@ -9,10 +9,8 @@ ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 #ln -sf "$DOTFILES/X/.xinitrc" "$HOME/.xinitrc"
 #ln -sf "$DOTFILES/X/.Xresources" "$HOME/.Xresources"
 
-if [ ! -f "$HOME/.bash-powerline.sh" ]; then
-    echo "Installing Bash-Powerline"
-    curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh
-fi
+echo "Installing Bash-Powerline"
+ln -sf "$DOTFILES/shell/.bash-powerline.sh" "$HOME/.bash-powerline.sh"
 
 ln -sf "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 if [ ! -d "$HOME/.tmux/plugins" ]; then
