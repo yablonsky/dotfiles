@@ -1,0 +1,5 @@
+rofi.modi: combi
+rofi.combi-modi: window,drun,ssh
+rofi.theme: /usr/share/rofi/themes/android_notification.rasi
+rofi.forn: hack 10
+

@@ -12,6 +12,11 @@ ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 echo "Installing Bash-Powerline"
 ln -sf "$DOTFILES/shell/.bash-powerline.sh" "$HOME/.bash-powerline.sh"
 
+echo "Installing i3 config"
+ln -sf -T "$DOTFILES/config/i3" "$HOME/.config/i3"
+echo "Installing rofi config"
+ln -sf -T "$DOTFILES/config/rofi" "$HOME/.config/rofi"
+
 ln -sf "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 if [ ! -d "$HOME/.tmux/plugins" ]; then
     echo "Installing Tmux plugins"
@@ -26,9 +31,4 @@ if [ ! -d "$HOME/.config/nvim" ]; then
     mkdir -p "$HOME/.config/nvim/bundle"
     git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.config/nvim/bundle/Vundle.vim"
     nvim +PluginInstall +qa
-fi
-
-if [ ! -d "$HOME/.config/openbox" ]; then
-    echo "Installing OpenBox config"
-    ln -s -T "$DOTFILES/config/openbox" "$HOME/.config/openbox"
 fi
