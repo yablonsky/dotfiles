@@ -24,7 +24,7 @@ export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias clear='clear && nitrogen --restore'
+#alias clear='clear && nitrogen --restore'
 
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
@@ -56,4 +56,4 @@ ext_ip() {
     echo $(ip -br -4 addr | grep UP | awk '{split($3,s,"/"); print s[1]}')
 }
 
-start_tmux
+#start_tmux
