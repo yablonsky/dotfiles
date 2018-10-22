@@ -1,5 +1,4 @@
 setxkbmap -option caps:swapescape &
 unclutter -idle 1 &
 xrandr --output DP-0 --mode 2560x1440 --rate 144 &
-xrandr --output HDMI-1 --above eDP-1 --auto &
-xrandr --output DP-2-2 --right-of HDMI-1 --rotate right --auto &
+xrandr --dpi 125 --output HDMI-1 --above eDP-1 --output DP-2-2 --right-of HDMI-1 --rotate right &
