@@ -20,6 +20,9 @@ ln -sf -T "$DOTFILES/config/i3status" "$HOME/.config/i3status"
 echo "Installing rofi config"
 ln -sf -T "$DOTFILES/config/rofi" "$HOME/.config/rofi"
 
+echo "Installing alacritty config"
+ln -sf -T "$DOTFILES/config/alacritty" "$HOME/.config/alacritty"
+
 ln -sf "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 if [ ! -d "$HOME/.tmux/plugins" ]; then
     echo "Installing Tmux plugins"
