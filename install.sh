@@ -14,6 +14,9 @@ ln -sf "$DOTFILES/shell/.bash-powerline.sh" "$HOME/.bash-powerline.sh"
 
 echo "Installing i3 config"
 ln -sf -T "$DOTFILES/config/i3" "$HOME/.config/i3"
+echo "Installing i3status config"
+ln -sf -T "$DOTFILES/config/i3status" "$HOME/.config/i3status"
+
 echo "Installing rofi config"
 ln -sf -T "$DOTFILES/config/rofi" "$HOME/.config/rofi"
 
