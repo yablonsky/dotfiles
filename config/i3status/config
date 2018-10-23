@@ -13,16 +13,22 @@ general {
 
 order += "disk /"
 order += "ethernet _first_"
+order += "wireless _first_"
 order += "volume master"
 order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "load"
+order += "battery 0"
 order += "tztime local"
 
 ethernet _first_ {
         # if you use %speed, i3status requires root privileges
         format_up = ": %ip (%speed)"
-        format_down = " "
+        format_down = ""
+}
+wireless _first_ {
+        format_up = ": (%quality at %essid, %bitrate) %ip"
+        format_down = ""
 }
 
 tztime local {
@@ -30,7 +36,7 @@ tztime local {
 }
 
 load {
-        format = ": %1min %5min %15min"
+        format = "%1min %5min %15min"
 }
 
 disk "/" {
@@ -43,11 +49,22 @@ cpu_temperature 0 {
 }
 
 cpu_usage {
-        format = ": %usage"
+        format = ": %usage"
 }
 
 volume master {
         format = ": %volume"
         format_muted = ": %volume"
         device = "pulse:alsa_output.pci-0000_00_1f.3.analog-stereo"
+}
+
+battery 0 {
+        format = "%status: %percentage %remaining"
+        format_down = ""
+        status_chr = ""
+        status_bat = ""
+        status_unk = "?"
+        status_full = ""
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
 }
