@@ -277,7 +277,6 @@ exec_always --no-startup-id feh --bg-fill $HOME/Pictures/wallpaper
 exec --no-startup-id setxkbmap -option caps:swapescape &
 exec --no-startup-id unclutter -idle 1 &
 exec --no-startup-id xrandr --output DP-0 --mode 2560x1440 --rate 144 &
-exec --no-startup-id xrandr --dpi 125 --output HDMI-1 --above eDP-1 --output DP-2-2 --right-of HDMI-1 --rotate right &
+exec_always --no-startup-id xrandr --dpi 125 --output HDMI-1 --auto --above eDP-1 --output DP-2-2 --auto --right-of HDMI-1 --rotate right
 exec --no-startup-id wal -R &
 exec --no-startup-id compton -b &
-
