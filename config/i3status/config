@@ -23,16 +23,16 @@ order += "tztime local"
 
 ethernet _first_ {
         # if you use %speed, i3status requires root privileges
-        format_up = ": %ip (%speed)"
+        format_up = "[] %ip (%speed)"
         format_down = ""
 }
 wireless _first_ {
-        format_up = ": (%quality at %essid, %bitrate) %ip"
+        format_up = "[] (%quality at %essid, %bitrate) %ip"
         format_down = ""
 }
 
 tztime local {
-        format = ": %Y-%m-%d %H:%M:%S"
+        format = "[] %Y-%m-%d %H:%M:%S"
 }
 
 load {
@@ -40,26 +40,26 @@ load {
 }
 
 disk "/" {
-        format = ": %avail/%total"
+        format = "[] %avail/%total"
 }
 
 cpu_temperature 0 {
-        format = ": %degrees°C"
+        format = "[] %degrees°C"
         path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
 }
 
 cpu_usage {
-        format = ": %usage"
+        format = "[] %usage"
 }
 
 volume master {
-        format = ": %volume"
-        format_muted = ": %volume"
+        format = "[] %volume"
+        format_muted = "[] %volume"
         device = "pulse:alsa_output.pci-0000_00_1f.3.analog-stereo"
 }
 
 battery 0 {
-        format = "%status: %percentage %remaining"
+        format = "[%status] %percentage %remaining"
         format_down = ""
         status_chr = ""
         status_bat = ""

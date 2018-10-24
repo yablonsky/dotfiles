@@ -39,3 +39,6 @@ if [ ! -d "$HOME/.config/nvim" ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.config/nvim/bundle/Vundle.vim"
     nvim +PluginInstall +qa
 fi
+
+echo "Installing pywal config"
+ln -sf "$HOME/.cache/wal/colors.Xresources" "$HOME/.Xresources"

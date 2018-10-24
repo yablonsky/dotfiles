@@ -24,8 +24,10 @@ Plugin 'janko-m/vim-test'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'flazz/vim-colorschemes'
+"Plugin 'flazz/vim-colorschemes'
 Plugin 'luochen1990/rainbow'
+
+Plugin 'dylanaraps/wal.vim'
 
 call vundle#end()
 filetype plugin indent on

@@ -3,9 +3,9 @@ set encoding=utf-8
 "set cursorline
 set splitbelow
 set splitright
-set termguicolors
+"set termguicolors
 "set lazyredraw
-colorscheme badwolf
+colorscheme wal
 "set background=dark
 
 
@@ -36,6 +36,6 @@ let g:rainbow_conf = {
     \}
 
 " vim-airline
-let g:airline_theme='badwolf'
+let g:airline_theme='wal'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
