@@ -34,7 +34,7 @@ set $transparent #00000000
 set $height 25
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
-client.focused          $black      $black      $darkwhite  $darkblack  $darkblack
+client.focused          $darkblue   $black      $darkwhite  $darkblack  $darkblue
 client.unfocused        $black      $black      $white      $darkblack  $darkblack
 client.focused_inactive $black      $black      $white      $darkblack  $darkblack
 client.urgent           $darkred    $darkred    $black      $darkred    $darkred
@@ -242,9 +242,9 @@ smart_gaps on
 # use window title, but no border
 #bindsym $mod+t border normal 0
 # use no window title and a thick border
-#bindsym $mod+y border pixel 2
+bindsym $mod+y border pixel 2
 # use neither window title nor border
-#bindsym $mod+u border none
+bindsym $mod+u border none
 
 bar {
 #    verbose yes
