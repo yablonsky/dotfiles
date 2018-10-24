@@ -39,3 +39,6 @@ fi
 
 echo "Installing pywal config"
 ln -sf "$HOME/.cache/wal/colors.Xresources" "$HOME/.Xresources"
+
+echo "Installing compton config"
+ln -sf "$DOTFILES/config/compton.conf" "$HOME/.config/compton.conf"
