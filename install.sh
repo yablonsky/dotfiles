@@ -42,3 +42,6 @@ ln -sf "$HOME/.cache/wal/colors.Xresources" "$HOME/.Xresources"
 
 echo "Installing compton config"
 ln -sf "$DOTFILES/config/compton.conf" "$HOME/.config/compton.conf"
+
+echo "Installing redshift config"
+ln -sf -T "$DOTFILES/config/redshift" "$HOME/.config/redshift"
