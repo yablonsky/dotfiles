@@ -32,6 +32,8 @@ set $darkblack   #1d2021
 set $transparent #00000000
 
 set $height 25
+set $border 2
+set $inner_gap 10
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
 client.focused          $darkblue   $black      $darkwhite  $darkblack  $darkblue
@@ -234,15 +236,16 @@ bindsym $mod+F1 mode "$mode_system"
 bindsym $mod+F2 exec --no-startup-id xrandr --auto
 
 # Window borders
-default_border none
+default_border pixel $border
 default_floating_border normal
-gaps inner 10
+gaps inner $inner_gap
 smart_gaps on
+hide_edge_borders smart
 
 # use window title, but no border
 #bindsym $mod+t border normal 0
 # use no window title and a thick border
-bindsym $mod+y border pixel 2
+bindsym $mod+y border pixel $border
 # use neither window title nor border
 bindsym $mod+u border none
 
