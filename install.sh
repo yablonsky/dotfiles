@@ -17,6 +17,14 @@ ln -sf -T "$DOTFILES/config/i3" "$HOME/.config/i3"
 echo "Linking i3status config"
 ln -sf -T "$DOTFILES/config/i3status" "$HOME/.config/i3status"
 
+echo "Linking i3blocks config"
+if [ ! -d "$HOME/.config/i3blocks" ]; then
+    git clone https://github.com/vivien/i3blocks-contrib "$HOME/.config/i3blocks"
+else
+    pushd "$HOME/.config/i3blocks" && git pull && popd
+fi
+ln -sf "$DOTFILES/config/i3blocks/config" "$HOME/.config/i3blocks/config"
+
 echo "Linking rofi config"
 ln -sf -T "$DOTFILES/config/rofi" "$HOME/.config/rofi"
 
