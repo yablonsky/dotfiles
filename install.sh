@@ -1,10 +1,12 @@
 #! /bin/bash
 
 DOTFILES=$(pwd)
-echo "Linking Dotfiles"
+echo "Linking shell dotfiles"
 ln -sf "$DOTFILES/shell/.bashrc" "$HOME/.bashrc"
 ln -sf "$DOTFILES/shell/.inputrc" "$HOME/.inputrc"
 ln -sf "$DOTFILES/shell/.editrc" "$HOME/.editrc"
+
+echo "Linking gitconfig"
 ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 
 echo "Linking Bash-Powerline"
@@ -45,6 +47,9 @@ ln -sf "$DOTFILES/config/compton.conf" "$HOME/.config/compton.conf"
 
 echo "Linking redshift config"
 ln -sf -T "$DOTFILES/config/redshift" "$HOME/.config/redshift"
+
+echo "Linking dunst config"
+ln -sf -T "$DOTFILES/config/dunst" "$HOME/.config/dunst"
 
 echo "Linking gtk configs"
 ln -sf "$DOTFILES/config/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
