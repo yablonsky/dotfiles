@@ -276,7 +276,7 @@ bar {
 }
 
 # AUTOSTART
-exec_always bash $HOME/.screenlayout/work_multihead.sh
+exec_always bash $HOME/.screenlayout/layout.sh
 exec_always --no-startup-id feh --bg-fill $HOME/Pictures/wallpaper
 exec_always --no-startup-id setxkbmap -option caps:swapescape &
 exec --no-startup-id wal -R &
