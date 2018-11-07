@@ -251,9 +251,9 @@ bindsym $mod+u border none
 
 bar {
 #    verbose yes
-    status_command i3status
-    #status_command i3blocks
-    #i3bar_command i3bar -t
+    #status_command i3status
+    status_command i3blocks
+    i3bar_command i3bar -t
     position top
     font pango:Hack, FontAwesome 9
     strip_workspace_numbers yes
@@ -263,15 +263,15 @@ bar {
     height $height
     colors {
         statusline         $white
-        background         $transparent
-        separator          $transparent
+        background         $darkblack
+        separator          $darkblack
 
 #                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $darkblue    $darkblue    $transparent
-        inactive_workspace $transparent $transparent $white
+        focused_workspace  $darkblue    $darkblack    $blue
+        inactive_workspace $darkwhite   $darkblack   $white
         active_workspace   $transparent $transparent $white
-        urgent_workspace   $darkred     $darkred     $transparent
-        binding_mode       $darkred     $darkred     $transparent
+        urgent_workspace   $darkred     $darkred     $white
+        binding_mode       $darkred     $darkred     $white
     }
 }
 
