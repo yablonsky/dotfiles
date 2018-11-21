@@ -10,9 +10,10 @@ colorscheme wal
 
 
 " netrw
-let g:netrw_preview   = 1
+let g:netrw_preview = 1
 let g:netrw_liststyle = 3
-let g:netrw_winsize   = 30
+let g:netrw_winsize = 25
+let g:netrw_browse_split = 4
 
 " Rainbow parenthesis
 let g:rainbow_active = 1
