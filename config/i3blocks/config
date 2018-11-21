@@ -30,6 +30,7 @@ separator_block_width=15
 markup=none
 
 [arch-update]
+command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME -q
 label=
 interval=3600
 markup=pango
@@ -144,12 +145,8 @@ signal=1
 ## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
 #SUBSCRIBE=0
 
-# Battery indicator
-#
-# The battery instance defaults to 0.
-[battery]
-label=BAT
-#label=⚡
+[battery2]
+markup=pango
 interval=30
 
 # Date Time
