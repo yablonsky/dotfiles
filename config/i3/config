@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $mod2 Mod1
 
 set_from_resource $darkred     color1  #000000
 set_from_resource $red         color9  #000000
@@ -57,10 +58,25 @@ font pango:monospace 9
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# use these keys for focus, movement, and resize directions when reaching for
+# the arrows is not convenient
+set $left  h
+set $down  j
+set $up    k
+set $right l
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 focus_follows_mouse no
+
+# Window borders
+default_border pixel $border
+default_floating_border normal
+gaps inner $inner_gap
+smart_gaps on
+hide_edge_borders smart
+
 
 # start a terminal
 bindsym $mod+Return exec alacritty
@@ -77,28 +93,16 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
+bindsym $mod+$left  focus left
+bindsym $mod+$down  focus down
+bindsym $mod+$up    focus up
+bindsym $mod+$right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
-#bindsym $mod+Shift+Left move left
-#bindsym $mod+Shift+Down move down
-#bindsym $mod+Shift+Up move up
-#bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+$left  move left
+bindsym $mod+Shift+$down  move down
+bindsym $mod+Shift+$up    move up
+bindsym $mod+Shift+$right move right
 
 # split in horizontal orientation
 bindsym $mod+semicolon split h
@@ -125,6 +129,13 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+# move the currently focused window to the scratchpad
+bindsym Mod1+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym Mod1+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -178,16 +189,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 5 ppt
-        bindsym j resize grow height 10 px or 5 ppt
-        bindsym k resize shrink height 10 px or 5 ppt
-        bindsym l resize grow width 10 px or 5 ppt
-
-        # same bindings, but for the arrow keys
-        #bindsym Left resize shrink width 10 px or 10 ppt
-        #bindsym Down resize grow height 10 px or 10 ppt
-        #bindsym Up resize shrink height 10 px or 10 ppt
-        #bindsym Right resize grow width 10 px or 10 ppt
+        bindsym $left  resize shrink width 10 px or 5 ppt
+        bindsym $down  resize grow height 10 px or 5 ppt
+        bindsym $up    resize shrink height 10 px or 5 ppt
+        bindsym $right resize grow width 10 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -235,19 +240,76 @@ mode "$mode_system" {
 bindsym $mod+F1 mode "$mode_system"
 bindsym $mod+F2 exec --no-startup-id xrandr --auto
 
-# Window borders
-default_border pixel $border
-default_floating_border normal
-gaps inner $inner_gap
-smart_gaps on
-hide_edge_borders smart
-
 # use window title, but no border
 #bindsym $mod+t border normal 0
 # use no window title and a thick border
-bindsym $mod+y border pixel $border
+#bindsym $mod+y border pixel $border
 # use neither window title nor border
-bindsym $mod+u border none
+#bindsym $mod+u border none
+
+mode "mouse" {
+
+	# set your three speeds here
+
+	set $slow 1
+	set $quick 10
+	set $fast 50
+
+	# Mouse movement (slow/fine-tuned) -- vim keybindings
+
+	bindsym $left  exec xdotool mousemove_relative -- -$slow 0
+	bindsym $down  exec xdotool mousemove_relative 0 $slow
+	bindsym $up    exec xdotool mousemove_relative -- 0 -$slow
+	bindsym $right exec xdotool mousemove_relative $slow 0
+
+	# Mouse movement (quicker) -- vim keybindings
+
+	bindsym Shift+$left  exec xdotool mousemove_relative -- -$quick 0
+	bindsym Shift+$down  exec xdotool mousemove_relative 0 $quick
+	bindsym Shift+$up    exec xdotool mousemove_relative -- 0 -$quick
+	bindsym Shift+$right exec xdotool mousemove_relative $quick 0
+
+	# Mouse movement (fast) -- vim keybindings
+
+	bindsym Shift+$mod2+$left  exec xdotool mousemove_relative -- -$fast 0
+	bindsym Shift+$mod2+$down  exec xdotool mousemove_relative 0 $fast
+	bindsym Shift+$mod2+$up    exec xdotool mousemove_relative -- 0 -$fast
+	bindsym Shift+$mod2+$right exec xdotool mousemove_relative $fast 0
+
+	# Left Click
+	bindsym f exec xdotool click 1
+
+	# Middle Click
+	bindsym d exec xdotool click 2
+
+	# Right Click
+	bindsym s exec xdotool click 3
+
+	# Left Click-and-drag
+	bindsym Shift+f exec xdotool mousedown 1
+
+	# Middle Click-and-drag 
+	bindsym Shift+d exec xdotool mousedown 2
+
+	# Right Click-and-drag
+	bindsym Shift+s exec xdotool mousedown 3
+
+	# Left Drag release
+	bindsym $mod2+f exec xdotool mouseup 1
+
+	# Middle Drag release
+	bindsym $mod2+d exec xdotool mouseup 2
+
+	# Right Drag release
+	bindsym $mod2+s exec xdotool mouseup 3
+
+
+	# return to normal keybindings -- IMPORTANT!!
+
+	bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+m mode "mouse"
 
 bar {
 #    verbose yes
@@ -277,9 +339,9 @@ bar {
 
 # AUTOSTART
 exec_always bash $HOME/.screenlayout/layout.sh
-exec_always --no-startup-id feh --bg-fill $HOME/Pictures/wallpaper
 exec_always --no-startup-id setxkbmap -option caps:swapescape &
 exec --no-startup-id wal -R &
 exec --no-startup-id unclutter -idle 1 &
 exec --no-startup-id compton -b &
 exec --no-startup-id redshift &
+exec_always --no-startup-id feh --no-xinerama --bg-fill $HOME/Pictures/wallpaper
