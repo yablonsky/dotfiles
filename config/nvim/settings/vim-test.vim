@@ -1,5 +1,5 @@
 let test#strategy = "neovim"
-let test#neovim#term_position = "vertical"
+let test#neovim#term_position = "split belowright"
 
 function! DockerTransform(cmd) abort
     return 'docker-compose exec -e NO_TIME_LIMIT=1 api '.a:cmd
