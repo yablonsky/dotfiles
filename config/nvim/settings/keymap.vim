@@ -5,6 +5,9 @@
 "nnoremap x <Esc>:x<CR>
 "nnoremap <C-X> <Esc>:bd<CR>
 
+"Leader
+let mapleader = "\<Space>"
+
 nnoremap n nzz
 nnoremap N Nzz
 
