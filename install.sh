@@ -44,7 +44,7 @@ if [ ! -d "$HOME/.config/nvim" ]; then
     ln -s -T "$DOTFILES/config/nvim" "$HOME/.config/nvim"
     mkdir -p "$HOME/.config/nvim/bundle"
     git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.config/nvim/bundle/Vundle.vim"
-    nvim +PluginInstall +qa
+    nvim --headless +PluginInstall +qa
 fi
 
 echo "Linking pywal config"
