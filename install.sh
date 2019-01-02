@@ -39,13 +39,10 @@ if [ ! -d "$HOME/.tmux/plugins" ]; then
     echo "Don't for forget to install tmux plugins (prefix + I)"
 fi
 
-if [ ! -d "$HOME/.config/nvim" ]; then
-    echo "Linking NVIM config"
-    ln -s -T "$DOTFILES/config/nvim" "$HOME/.config/nvim"
-    mkdir -p "$HOME/.config/nvim/bundle"
-    git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.config/nvim/bundle/Vundle.vim"
-    nvim +PluginInstall +qa
-fi
+echo "Linking NVIM config"
+ln -s -T "$DOTFILES/config/nvim" "$HOME/.config/nvim"
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+nvim +PlugInstall +qa
 
 echo "Linking pywal config"
 ln -sf "$HOME/.cache/wal/colors.Xresources" "$HOME/.Xresources"
