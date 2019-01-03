@@ -29,21 +29,17 @@ autocmd VimEnter * nnoremap [b :BufMRUNext<CR>
 autocmd VimEnter * nnoremap ]b :BufMRUPrev<CR>
 nnoremap <leader>b :BufMRUCommit<CR>
 
-"YouCompleteMe
-"nnoremap d :YcmCompleter GoTo<CR>
-"nnoremap <C-b> :YcmCompleter GoToDeclaration<CR>
-"nnoremap <C-h> :YcmCompleter GoToReferences<CR>
-
 "vim-test
-nmap <leader>t? :map <leader>t<CR>
 nmap <silent> <leader>tn :TestNearest<CR>
 nmap <silent> <leader>tf :TestFile<CR>
 nmap <silent> <leader>ts :TestSuite<CR>
 nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tg :TestVisit<CR>
 
+nmap <leader>t? :map <leader>t<CR>
+
+
 " Fugitive mapping
-nmap <leader>g? :map <leader>g<CR>
 nmap <leader>ge :Gedit<cr>
 nmap <leader>gr :Gread<cr>
 nmap <leader>gR :Gremove<cr>
@@ -63,3 +59,5 @@ nmap <leader>gu :Gpush<cr>
 nmap <leader>gU :Gpushu<cr>
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gW :Gbrowse<cr>
+
+nmap <leader>g? :map <leader>g<CR>
