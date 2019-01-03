@@ -10,10 +10,14 @@ Plug 'tpope/vim-commentary'
 Plug 'svermeulen/vim-easyclip'
 
 Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/neoinclude.vim'
 Plug 'w0rp/ale'
-Plug 'davidhalter/jedi-vim'
 Plug 'janko-m/vim-test'
-Plug 'zchee/deoplete-jedi'
+
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+
+Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
