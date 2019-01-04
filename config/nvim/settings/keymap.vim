@@ -8,6 +8,9 @@
 "Leader
 let mapleader = "\<Space>"
 
+nmap <leader>q :q<CR>
+nmap <leader>Q :qa<CR>
+
 nnoremap n nzz
 nnoremap N Nzz
 
@@ -61,3 +64,7 @@ nmap <leader>gs :Gstatus<cr>
 nmap <leader>gW :Gbrowse<cr>
 
 nmap <leader>g? :map <leader>g<CR>
+
+
+"fzf
+nmap <leader>e :FZF<CR>

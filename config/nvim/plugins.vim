@@ -13,6 +13,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
+Plug 'junegunn/fzf'
 
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
