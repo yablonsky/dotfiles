@@ -10,6 +10,8 @@ let mapleader = "\<Space>"
 
 nmap <leader>q :q<CR>
 nmap <leader>Q :qa<CR>
+nmap <leader>w :w<CR>
+nmap <leader>x :x<CR>
 
 nnoremap n nzz
 nnoremap N Nzz
