@@ -21,6 +21,7 @@ export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export TERMINAL=/usr/bin/alacritty
 
+export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
 
 alias ls='ls --color=auto'
