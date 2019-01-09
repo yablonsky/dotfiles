@@ -24,8 +24,8 @@ export TERMINAL=/usr/bin/alacritty
 export PATH="$PATH:$HOME/.local/bin"
 
 alias ls='ls --color=auto'
+alias la='ls -lah --color=auto'
 alias grep='grep --color=auto'
-#alias clear='clear && nitrogen --restore'
 
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
