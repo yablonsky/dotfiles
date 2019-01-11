@@ -12,6 +12,9 @@ ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 echo "Linking Bash-Powerline"
 ln -sf "$DOTFILES/shell/.bash-powerline.sh" "$HOME/.bash-powerline.sh"
 
+echo "Linking .xprofile"
+ln -sf "$DOTFILES/X/.xprofile" "$HOME/.xprofile"
+
 echo "Linking i3 config"
 ln -sf -T "$DOTFILES/config/i3" "$HOME/.config/i3"
 echo "Linking i3status config"
