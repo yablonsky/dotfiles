@@ -2,4 +2,6 @@ rofi.modi: combi
 rofi.combi-modi: window,drun,run,ssh
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
 rofi.forn: hack 10
-
+rofi.fuzzy: true
+rofi.sort: true
+rofi.sorting-method: fzf
