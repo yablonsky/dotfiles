@@ -1,5 +1,8 @@
 #! /bin/bash
 
+set -euo pipefail
+
+
 DOTFILES=$(pwd)
 echo "Linking shell dotfiles"
 ln -sf "$DOTFILES/shell/.bashrc" "$HOME/.bashrc"
@@ -42,10 +45,16 @@ if [ ! -d "$HOME/.tmux/plugins" ]; then
     echo "Don't for forget to install tmux plugins (prefix + I)"
 fi
 
-echo "Linking NVIM config"
-ln -s -T "$DOTFILES/config/nvim" "$HOME/.config/nvim"
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-nvim --headless +PlugInstall +qa
+if [ ! -d "$HOME/.config/nvim" ]; then
+    echo "NVIM: linking config"
+    ln -s -T "$DOTFILES/config/nvim" "$HOME/.config/nvim"
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    echo "Nvim: Installing plugins"
+    nvim --headless +PlugInstall +qa
+else
+    echo "Nvim: Updating plugins"
+    nvim --headless +PlugUpdate +PlugClean +qa
+fi
 
 echo "Linking pywal config"
 ln -sf "$HOME/.cache/wal/colors.Xresources" "$HOME/.Xresources"
@@ -59,6 +68,6 @@ ln -sf -T "$DOTFILES/config/redshift" "$HOME/.config/redshift"
 echo "Linking dunst config"
 ln -sf -T "$DOTFILES/config/dunst" "$HOME/.config/dunst"
 
-#echo "Linking gtk configs"
-#ln -sf "$DOTFILES/config/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
-#ln -sf "$DOTFILES/config/gtk-3.0/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
+echo "Linking gtk configs"
+ln -sf "$DOTFILES/config/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
+ln -sf "$DOTFILES/config/gtk-3.0/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
