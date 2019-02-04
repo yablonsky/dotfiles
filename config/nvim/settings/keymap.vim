@@ -55,11 +55,12 @@ nmap <leader>gc :Gcommit<cr>
 nmap <leader>gC :Git co 
 nmap <leader>gd :Gdiff<cr>
 nmap <leader>gg :Ggrep 
-nmap <leader>ggw :Ggrep <cword><cr>
+nmap <leader>gG :Ggrep "\W<cword>\W"<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gf :Gfetch<cr>
 nmap <leader>gp :Gpull<cr>
-nmap <leader>gpm :Gpull origin master<cr>
+nmap <leader>gm :Gpull origin master<cr>
+nmap <leader>gM :Git master<cr>
 nmap <leader>gu :Gpush<cr>
 nmap <leader>gU :Gpushu<cr>
 nmap <leader>gs :Gstatus<cr>
