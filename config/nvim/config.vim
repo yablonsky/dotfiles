@@ -8,6 +8,7 @@ set autoread                    "Reload files changed outside vim
 set clipboard=unnamed           "Use system register * for yank/delete/paste
 set backspace=indent,eol,start
 set title
+set lazyredraw
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
