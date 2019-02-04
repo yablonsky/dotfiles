@@ -42,7 +42,7 @@ if [ ! -d "$HOME/.tmux/plugins" ]; then
     echo "Linking Tmux plugins"
     mkdir -p "$HOME/.tmux/plugins"
     git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
-    echo "Don't for forget to install tmux plugins (prefix + I)"
+    echo "Don't forget to install tmux plugins (prefix + I)"
 fi
 
 if [ ! -d "$HOME/.config/nvim" ]; then
@@ -50,10 +50,10 @@ if [ ! -d "$HOME/.config/nvim" ]; then
     ln -s -T "$DOTFILES/config/nvim" "$HOME/.config/nvim"
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     echo "Nvim: Installing plugins"
-    nvim --headless +PlugInstall +qa
+    nvim --headless +PlugInstall +UpdateRemotePlugins +qa
 else
     echo "Nvim: Updating plugins"
-    nvim --headless +PlugUpdate +PlugClean +qa
+    nvim --headless +PlugClean +PlugUpdate +qa
 fi
 
 echo "Linking pywal config"
