@@ -39,4 +39,8 @@ let g:rainbow_conf = {
 " vim-airline
 let g:airline_theme='wal'
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#fugitiveline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#current_first = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
