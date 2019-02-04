@@ -4,7 +4,6 @@ set encoding=utf-8
 set splitbelow
 set splitright
 "set termguicolors
-"set lazyredraw
 colorscheme wal
 "set background=dark
 
@@ -44,3 +43,10 @@ let g:airline#extensions#fugitiveline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#current_first = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
+
+" fzf
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+" don't change status when opening fzf
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
