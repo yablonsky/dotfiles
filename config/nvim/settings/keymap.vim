@@ -30,9 +30,8 @@ tnoremap <A-p> <c-\><c-n>pa
 
 "BufMRU
 "override unimpaired keybindings
-"autocmd VimEnter * nnoremap [b :BufMRUNext<CR>
-"autocmd VimEnter * nnoremap ]b :BufMRUPrev<CR>
-"nnoremap <leader>b :BufMRUCommit<CR>
+autocmd VimEnter * nnoremap [b :BufMRUNext<CR>
+autocmd VimEnter * nnoremap ]b :BufMRUPrev<CR>
 
 "vim-test
 nmap <silent> <leader>tn :TestNearest<CR>
