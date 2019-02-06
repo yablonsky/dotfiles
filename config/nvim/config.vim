@@ -10,6 +10,8 @@ set backspace=indent,eol,start
 set title
 set lazyredraw
 set hidden
+set exrc
+set secure
 
 " Turn Off Swap Files
 set noswapfile

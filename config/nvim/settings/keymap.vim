@@ -29,9 +29,8 @@ tnoremap <A-h> <c-\><c-n><c-w>h
 tnoremap <A-p> <c-\><c-n>pa
 
 "BufMRU
-"override unimpaired keybindings
-autocmd VimEnter * nnoremap [b :BufMRUNext<CR>
-autocmd VimEnter * nnoremap ]b :BufMRUPrev<CR>
+map <Tab> :BufMRUNext<CR>
+map <S-Tab> :BufMRUPrev<CR>
 
 "vim-test
 nmap <silent> <leader>tn :TestNearest<CR>
