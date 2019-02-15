@@ -343,4 +343,5 @@ exec --no-startup-id wal -R &
 exec --no-startup-id unclutter -idle 1 &
 exec --no-startup-id compton -b &
 exec --no-startup-id redshift &
+exec nm-applet &
 exec_always --no-startup-id feh --no-xinerama --bg-fill $HOME/Pictures/wallpaper
