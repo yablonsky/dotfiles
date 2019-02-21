@@ -58,5 +58,3 @@ start_tmux() {
 ext_ip() {
     echo $(ip -br -4 addr | grep UP | awk '{split($3,s,"/"); print s[1]}')
 }
-
-#start_tmux
