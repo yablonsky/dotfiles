@@ -14,6 +14,7 @@ Plug 'Shougo/neoinclude.vim'
 Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }

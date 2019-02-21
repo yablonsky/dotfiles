@@ -69,6 +69,7 @@ nmap <leader>g? :map <leader>g<CR>
 
 "fzf
 nmap <leader>e :FZF<CR>
-nmap <leader>s :FZFMru<CR>
+nmap <leader>s :History<CR>
 nmap <leader>a :FZFBr<CR>
 nmap <leader>A :FZFBrRemote<CR>
+nmap <leader>h :History:<CR>
