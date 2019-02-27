@@ -43,6 +43,7 @@ let g:airline#extensions#fugitiveline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#current_first = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
+let g:airline#extensions#virtualenv#enabled = 1
 
 " fzf
 " let g:fzf_history_dir = '~/.local/share/fzf-history'

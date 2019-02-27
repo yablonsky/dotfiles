@@ -18,6 +18,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'plytophogy/vim-virtualenv'
 
 Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 
