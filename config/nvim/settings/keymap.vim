@@ -75,3 +75,7 @@ nmap <leader>A :FZFBrRemote<CR>
 nmap <leader>h :History:<CR>
 nmap <leader>f :FZFCdRelative<CR>
 nmap <leader>F :FZFCd<CR>
+
+"ripgrep
+nmap <leader>v :Rg <C-R><C-W><CR>
+nmap <leader>c :Rg \W<C-R><C-W>\W<CR>
