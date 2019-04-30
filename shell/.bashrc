@@ -20,6 +20,7 @@ fi
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export TERMINAL=/usr/bin/alacritty
+export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 
 export PATH="$PATH:$HOME/.local/bin"
 
