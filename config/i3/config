@@ -338,6 +338,7 @@ bar {
 # AUTOSTART
 exec_always bash $HOME/.screenlayout/layout.sh
 exec_always --no-startup-id setxkbmap -option caps:swapescape &
+exec --no-startup-id synclient VertScrollDelta=-150 HorizTwoFingerScroll=1 HorizScrollDelta=-150 &
 exec --no-startup-id wal -R &
 exec --no-startup-id unclutter -idle 1 &
 exec --no-startup-id compton -b &
