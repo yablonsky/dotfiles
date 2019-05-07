@@ -219,25 +219,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
-# Screen lock
-set $Locker i3lock -c 000000 && sleep 1
-
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+F1 mode "$mode_system"
-bindsym $mod+F2 exec --no-startup-id xrandr --auto
+bindsym $mod+Shift+s exec rofigen ~/dotfiles/rofi_scripts/system_power.sh
 
 # use window title, but no border
 #bindsym $mod+t border normal 0
@@ -245,70 +227,6 @@ bindsym $mod+F2 exec --no-startup-id xrandr --auto
 #bindsym $mod+y border pixel $border
 # use neither window title nor border
 #bindsym $mod+u border none
-
-mode "mouse" {
-
-	# set your three speeds here
-
-	set $slow 5
-	set $quick 50
-	set $fast 200
-
-	# Mouse movement (slow/fine-tuned) -- vim keybindings
-
-	bindsym $left  exec xdotool mousemove_relative -- -$slow 0
-	bindsym $down  exec xdotool mousemove_relative 0 $slow
-	bindsym $up    exec xdotool mousemove_relative -- 0 -$slow
-	bindsym $right exec xdotool mousemove_relative $slow 0
-
-	# Mouse movement (quicker) -- vim keybindings
-
-	bindsym Shift+$left  exec xdotool mousemove_relative -- -$quick 0
-	bindsym Shift+$down  exec xdotool mousemove_relative 0 $quick
-	bindsym Shift+$up    exec xdotool mousemove_relative -- 0 -$quick
-	bindsym Shift+$right exec xdotool mousemove_relative $quick 0
-
-	# Mouse movement (fast) -- vim keybindings
-
-	bindsym Shift+$mod+$left  exec xdotool mousemove_relative -- -$fast 0
-	bindsym Shift+$mod+$down  exec xdotool mousemove_relative 0 $fast
-	bindsym Shift+$mod+$up    exec xdotool mousemove_relative -- 0 -$fast
-	bindsym Shift+$mod+$right exec xdotool mousemove_relative $fast 0
-
-	# Left Click
-	bindsym f exec xdotool click 1
-
-	# Middle Click
-	bindsym d exec xdotool click 2
-
-	# Right Click
-	bindsym s exec xdotool click 3
-
-	# Left Click-and-drag
-	bindsym Shift+f exec xdotool mousedown 1
-
-	# Middle Click-and-drag 
-	bindsym Shift+d exec xdotool mousedown 2
-
-	# Right Click-and-drag
-	bindsym Shift+s exec xdotool mousedown 3
-
-	# Left Drag release
-	bindsym $mod+f exec xdotool mouseup 1
-
-	# Middle Drag release
-	bindsym $mod+d exec xdotool mouseup 2
-
-	# Right Drag release
-	bindsym $mod+s exec xdotool mouseup 3
-
-
-	# return to normal keybindings -- IMPORTANT!!
-
-	bindsym Escape mode "default"
-}
-
-bindsym $mod+Shift+m mode "mouse"
 
 bar {
 #    verbose yes
@@ -337,7 +255,6 @@ bar {
 
 # AUTOSTART
 exec_always bash $HOME/.screenlayout/layout.sh
-exec_always --no-startup-id setxkbmap -option caps:swapescape &
 exec --no-startup-id synclient VertScrollDelta=-150 HorizTwoFingerScroll=1 HorizScrollDelta=-150 &
 exec --no-startup-id wal -R &
 exec --no-startup-id unclutter -idle 1 &
