@@ -222,6 +222,7 @@ bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 # Rofi Menu
 bindsym $mod+Shift+s exec rofigen ~/dotfiles/rofi_scripts/system_power.sh
 bindsym $mod+Shift+a exec rofigen ~/dotfiles/rofi_scripts/laptop_menu.sh
+bindsym $mod+Shift+z exec i3lock -c 000000
 
 # use window title, but no border
 #bindsym $mod+t border normal 0
