@@ -1,6 +1,6 @@
 #!/bin/bash
 
-title="System Power"
+title="Laptop Menu"
 widthpercent=30
 
 typeset -A menu
