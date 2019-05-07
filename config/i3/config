@@ -219,7 +219,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
+# Rofi Menu
 bindsym $mod+Shift+s exec rofigen ~/dotfiles/rofi_scripts/system_power.sh
+bindsym $mod+Shift+a exec rofigen ~/dotfiles/rofi_scripts/laptop_menu.sh
 
 # use window title, but no border
 #bindsym $mod+t border normal 0
