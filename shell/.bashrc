@@ -43,19 +43,3 @@ source ~/.bash-powerline.sh
 
 [ -f "$HOME/.bash_vars.sh" ] && . "$HOME/.bash_vars.sh"
 [ -f "$HOME/.bash_alias.sh" ] && . "$HOME/.bash_alias.sh"
-
-start_tmux() {
-    if [[ ! $TERM =~ "screen" ]] && [ -z $TMUX ]; then
-        WHOAMI=$(whoami)
-        if tmux has-session -t $WHOAMI 2>/dev/null; then
-            exec tmux -2 attach-session -t $WHOAMI
-        else
-            exec tmux -2 new-session -s $WHOAMI
-        fi
-    fi
-}
-
-
-ext_ip() {
-    echo $(ip -br -4 addr | grep UP | awk '{split($3,s,"/"); print s[1]}')
-}

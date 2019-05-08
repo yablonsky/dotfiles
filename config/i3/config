@@ -78,7 +78,7 @@ hide_edge_borders smart
 
 
 # start a terminal
-bindsym --release $mod+Return exec alacritty -e nvim +te
+bindsym --release $mod+Return exec alacritty -e bash -i -c "nvim +te"
 
 # kill focused window
 bindsym $mod+Shift+q kill
