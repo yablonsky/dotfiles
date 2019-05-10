@@ -1,3 +1,11 @@
+"General
+"nnoremap q <C-W><C-Q>
+"nnoremap Q <Esc>:qa<CR>
+"nnoremap s <Esc>:w<CR>
+"nnoremap x <Esc>:x<CR>
+"nnoremap <C-X> <Esc>:bd<CR>
+
+"Leader
 let mapleader = "\<Space>"
 
 nmap <leader>q :q<CR>
@@ -9,14 +17,10 @@ nnoremap n nzz
 nnoremap N Nzz
 
 "Navigation
-nnoremap <leader>j <c-w>j
-nnoremap <leader>k <c-w>k
-nnoremap <leader>l <c-w>l
-nnoremap <leader>h <c-w>h
-nnoremap <leader>J <c-w>J
-nnoremap <leader>K <c-w>K
-nnoremap <leader>L <c-w>L
-nnoremap <leader>H <c-w>H
+nnoremap <A-j> <c-w>j
+nnoremap <A-k> <c-w>k
+nnoremap <A-l> <c-w>l
+nnoremap <A-h> <c-w>h
 tnoremap <A-[> <C-\><C-n>
 tnoremap <A-j> <c-\><c-n><c-w>j
 tnoremap <A-k> <c-\><c-n><c-w>k
