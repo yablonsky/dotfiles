@@ -222,7 +222,7 @@ bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 # Rofi Menu
 bindsym $mod+Shift+s exec rofigen ~/dotfiles/rofi_scripts/system_power.sh
 bindsym $mod+Shift+a exec rofigen ~/dotfiles/rofi_scripts/laptop_menu.sh
-bindsym $mod+Shift+z exec i3lock -c 000000
+bindsym $mod+Shift+z exec systemctl suspend
 
 # use window title, but no border
 #bindsym $mod+t border normal 0
@@ -258,6 +258,7 @@ bar {
 
 # AUTOSTART
 exec_always bash $HOME/.screenlayout/layout.sh
+exec --no-startup-id light-locker --no-late-locking --lock-on-suspend &
 exec --no-startup-id synclient VertScrollDelta=-150 HorizTwoFingerScroll=1 HorizScrollDelta=-150 &
 exec --no-startup-id wal -R &
 exec --no-startup-id unclutter -idle 1 &
