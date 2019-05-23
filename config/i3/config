@@ -36,9 +36,9 @@ set $border 2
 set $inner_gap 10
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
-client.focused          $darkblue   $black      $darkwhite  $darkblack  $darkblue
-client.unfocused        $black      $black      $white      $darkblack  $darkblack
-client.focused_inactive $black      $black      $white      $darkblack  $darkblack
+client.focused          $blue       $black      $blue       $darkblack  $darkblue
+client.unfocused        $darkwhite  $black      $darkwhite  $darkblack  $darkblack
+client.focused_inactive $darkwhite  $black      $darkwhite  $darkblack  $darkblack
 client.urgent           $darkred    $darkred    $black      $darkred    $darkred
 client.background       $black
 
