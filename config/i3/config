@@ -201,6 +201,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
+# Media key controls
 # Audio controls
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks 
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
@@ -216,10 +218,19 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 5 # decrease screen brightness
 
-bindsym --release XF86WLAN exec --no-startup-id /home/andriy/tools/net_toggle/net_toggle
+bindsym --release XF86WLAN exec --no-startup-id \
+[[ "$(sudo rfkill -no SOFT list wlan)" = "unblocked" ]] \
+&& notify-send --icon=network-wireless "Wireless LAN ON" \
+|| notify-send --icon=network-wireless -u low "Wireless LAN OFF"
+
+bindsym --release XF86Bluetooth exec --no-startup-id \
+[[ "$(sudo rfkill -no SOFT list bluetooth)" = "unblocked" ]] \
+&& notify-send --icon=network-wireless "Bluetooth ON" \
+|| notify-send --icon=network-wireless -u low "Bluetooth OFF"
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+
 
 # Rofi Menu
 bindsym $mod+Shift+s exec rofigen ~/dotfiles/rofi_scripts/system_power.sh
