@@ -213,16 +213,18 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 5 # decrease screen brightness
+
+bindsym --release XF86WLAN exec --no-startup-id /home/andriy/tools/net_toggle/net_toggle
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+#bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Rofi Menu
 bindsym $mod+Shift+s exec rofigen ~/dotfiles/rofi_scripts/system_power.sh
 bindsym $mod+Shift+a exec rofigen ~/dotfiles/rofi_scripts/laptop_menu.sh
-bindsym $mod+Shift+z exec light-locker-command -l
+bindsym $mod+Shift+z exec systemctl suspend
 
 # use window title, but no border
 #bindsym $mod+t border normal 0

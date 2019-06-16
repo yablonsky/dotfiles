@@ -26,6 +26,7 @@
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
 command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME
+#separator="|"
 separator_block_width=15
 markup=none
 
@@ -97,13 +98,14 @@ interval=30
 #
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[cpu_usage]
-label=
-interval=10
-min_width=CPU 100.00%
+#[cpu_usage]
+#label=
+#interval=10
+#min_width=CPU 100.00%
 #separator=false
 
 [load_average]
+label=
 #label=LOAD
 interval=10
 
@@ -144,6 +146,11 @@ signal=1
 #USE_DESCRIPTION=0
 ## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
 #SUBSCRIBE=0
+
+[backlight]
+label=
+command=echo "$(xbacklight -get)%"
+interval=5
 
 [battery2]
 markup=pango
