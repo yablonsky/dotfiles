@@ -1,10 +1,10 @@
 set nocompatible               " be improved, required
 
 let nvim_config_base = '~/.config/nvim/'
-"""" Vundle Initialization
-let vundles_path = nvim_config_base . 'plugins.vim'
-if filereadable(expand(vundles_path))
-  execute 'source ' . fnameescape(vundles_path)
+"""" Plugin Initialization
+let plugin_path = nvim_config_base . 'plugins.vim'
+if filereadable(expand(plugin_path))
+  execute 'source ' . fnameescape(plugin_path)
 endif
 
 """" General Config
