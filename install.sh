@@ -71,3 +71,6 @@ ln -sf -T "$DOTFILES/config/dunst" "$HOME/.config/dunst"
 echo "Linking gtk configs"
 ln -sf "$DOTFILES/config/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
 ln -sf "$DOTFILES/config/gtk-3.0/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
+
+echo "Linking sway config"
+ln -sf -T "$DOTFILES/config/sway" "$HOME/.config/sway"
