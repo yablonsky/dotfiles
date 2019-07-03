@@ -131,27 +131,27 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Workspaces:
 #
     # switch to workspace
-    bindsym $mod+1 workspace 1
-    bindsym $mod+2 workspace 2
-    bindsym $mod+3 workspace 3
-    bindsym $mod+4 workspace 4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    bindsym $mod+1 workspace 1; exec --no-startup-id notify-send -t 1000 "Workspace 1"
+    bindsym $mod+2 workspace 2; exec --no-startup-id notify-send -t 1000 "Workspace 2"
+    bindsym $mod+3 workspace 3; exec --no-startup-id notify-send -t 1000 "Workspace 3"
+    bindsym $mod+4 workspace 4; exec --no-startup-id notify-send -t 1000 "Workspace 4"
+    bindsym $mod+5 workspace 5; exec --no-startup-id notify-send -t 1000 "Workspace 5"
+    bindsym $mod+6 workspace 6; exec --no-startup-id notify-send -t 1000 "Workspace 6"
+    bindsym $mod+7 workspace 7; exec --no-startup-id notify-send -t 1000 "Workspace 7"
+    bindsym $mod+8 workspace 8; exec --no-startup-id notify-send -t 1000 "Workspace 8"
+    bindsym $mod+9 workspace 9; exec --no-startup-id notify-send -t 1000 "Workspace 9"
+    bindsym $mod+0 workspace 10; exec --no-startup-id notify-send -t 1000 "Workspace 10"
     # move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace 1
-    bindsym $mod+Shift+2 move container to workspace 2
-    bindsym $mod+Shift+3 move container to workspace 3
-    bindsym $mod+Shift+4 move container to workspace 4
-    bindsym $mod+Shift+5 move container to workspace 5
-    bindsym $mod+Shift+6 move container to workspace 6
-    bindsym $mod+Shift+7 move container to workspace 7
-    bindsym $mod+Shift+8 move container to workspace 8
-    bindsym $mod+Shift+9 move container to workspace 9
-    bindsym $mod+Shift+0 move container to workspace 10
+    bindsym $mod+Shift+1 move container to workspace 1; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 1"
+    bindsym $mod+Shift+2 move container to workspace 2; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 2"
+    bindsym $mod+Shift+3 move container to workspace 3; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 3"
+    bindsym $mod+Shift+4 move container to workspace 4; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 4"
+    bindsym $mod+Shift+5 move container to workspace 5; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 5"
+    bindsym $mod+Shift+6 move container to workspace 6; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 6"
+    bindsym $mod+Shift+7 move container to workspace 7; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 7"
+    bindsym $mod+Shift+8 move container to workspace 8; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 8"
+    bindsym $mod+Shift+9 move container to workspace 9; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 9"
+    bindsym $mod+Shift+0 move container to workspace 10; exec --no-startup-id notify-send -t 1000 "Moved To Workspace 10"
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -283,15 +283,15 @@ bindsym $mod+r mode "resize"
 #        }
 #    }
 
-bar {
-    status_command i3blocks
-    position top
-    strip_workspace_numbers yes
-    separator_symbol "|"
-    bindsym button4 nop
-    bindsym button5 nop
-    height $height
-}
+#bar {
+#    status_command i3blocks
+#    position top
+#    strip_workspace_numbers yes
+#    separator_symbol "|"
+#    bindsym button4 nop
+#    bindsym button5 nop
+#    height $height
+#}
 
 #
 # Window Borders
@@ -332,6 +332,9 @@ bar {
         timeout 600 'swaymsg "output * dpms off"' \
             resume 'swaymsg "output * dpms on"' \
         before-sleep 'swaylock -f -c 000000'
+
+bindswitch lid:on output eDP-1 disable
+bindswitch lid:off output eDP-1 enable
 
 
 include /etc/sway/config.d/*
