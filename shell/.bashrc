@@ -39,7 +39,5 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 source ~/.bash-powerline.sh
 
-(cat ~/.cache/wal/sequences &)
-
 [ -f "$HOME/.bash_vars.sh" ] && . "$HOME/.bash_vars.sh"
 [ -f "$HOME/.bash_alias.sh" ] && . "$HOME/.bash_alias.sh"
