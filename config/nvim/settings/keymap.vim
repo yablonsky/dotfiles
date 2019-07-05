@@ -11,6 +11,7 @@ let mapleader = "\<Space>"
 nmap <leader>q :q<CR>
 nmap <leader>Q :qa<CR>
 nmap <leader>w :w<CR>
+nmap <leader>W :w !sudo tee %<CR>
 nmap <leader>x :x<CR>
 
 nnoremap n nzz
