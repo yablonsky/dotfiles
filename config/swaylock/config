@@ -1,0 +1,4 @@
+daemonize
+ignore-empty-password
+indicator-radius=100
+indicator-thickness=20

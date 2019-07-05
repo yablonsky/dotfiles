@@ -74,3 +74,4 @@ ln -sf "$DOTFILES/config/gtk-3.0/settings.ini" "$HOME/.config/gtk-3.0/settings.i
 
 echo "Linking sway config"
 ln -sf -T "$DOTFILES/config/sway" "$HOME/.config/sway"
+ln -sf -T "$DOTFILES/config/swaylock" "$HOME/.config/swaylock"
