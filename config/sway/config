@@ -61,9 +61,10 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
     input "2:7:SynPS/2_Synaptics_TouchPad" {
         dwt enabled
-        tap enabled
+        tap disabled
+        middle_emulation disabled
+        click_method none
         natural_scroll enabled
-        #middle_emulation enabled
     }
 
 #
