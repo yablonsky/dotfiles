@@ -109,6 +109,8 @@ set $notification_timeout 5000
     bindsym $mod+n exec networkmanager_dmenu
     bindsym $mod+z exec $lock
     bindsym $mod+Shift+z exec $lock && systemctl suspend
+    # exit sway (logs you out of your Wayland session)
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -310,7 +312,7 @@ bindsym $mod+r mode "resize"
 # 
 # Misc.
 #
-    xwayland enable
+    xwayland disable
     #output eDP-1 scale 1
 
 
