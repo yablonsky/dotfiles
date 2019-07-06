@@ -1,5 +1,5 @@
 ! "Enabled modi" Set from: File
-rofi.modi: run,combi
+rofi.modi: combi,window
 ! "Window width" Set from: Default
 ! rofi.width:                          50
 ! "Number of lines" Set from: Default
@@ -67,7 +67,7 @@ rofi.sort: true
 ! "Parse known_hosts file for ssh mode" Set from: Default
 ! rofi.parse-known-hosts:              true
 ! "Set the modi to combine in combi mode" Set from: File
-rofi.combi-modi: window,drun
+rofi.combi-modi: drun,run
 ! "Set the matching algorithm. (normal, regex, glob, fuzzy)" Set from: File
 rofi.matching:                       fuzzy
 ! "Tokenize input string" Set from: Default
