@@ -78,7 +78,8 @@ hide_edge_borders smart
 
 
 # start a terminal
-bindsym --release $mod+Return exec alacritty -e bash -i -c "nvim +te"
+#bindsym --release $mod+Return exec alacritty -e bash -i -c "nvim +te"
+bindsym --release $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -272,6 +273,7 @@ bar {
 # AUTOSTART
 #exec_always bash $HOME/.screenlayout/layout.sh
 #exec --no-startup-id light-locker &
+exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --pos 0x0 --rotate normal --rate 144
 exec --no-startup-id synclient VertScrollDelta=-150 HorizTwoFingerScroll=1 HorizScrollDelta=-150 &
 exec --no-startup-id wal -R &
 exec --no-startup-id unclutter -idle 3 &

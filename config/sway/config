@@ -312,7 +312,7 @@ bindsym $mod+r mode "resize"
 # 
 # Misc.
 #
-    xwayland disable
+    xwayland enable
     #output eDP-1 scale 1
 
 
