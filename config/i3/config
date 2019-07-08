@@ -11,6 +11,9 @@
 
 set $mod Mod4
 
+set $wallpaper ~/Pictures/wallpaper
+set $lock i3lock -e -f -i ~/Pictures/wallpaper_blur
+
 set_from_resource $darkred     color1  #000000
 set_from_resource $red         color9  #000000
 set_from_resource $darkgreen   color2  #000000
@@ -30,10 +33,6 @@ set_from_resource $white       color15 #000000
 set $black       #282828
 set $darkblack   #1d2021
 set $transparent #00000000
-
-set $height 25
-set $border 2
-set $inner_gap 10
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
 client.focused          $blue       $black      $blue       $darkblack  $darkblue
@@ -70,10 +69,8 @@ floating_modifier $mod
 focus_follows_mouse no
 
 # Window borders
-default_border pixel $border
+default_border pixel 2
 default_floating_border normal
-gaps inner $inner_gap
-smart_gaps on
 hide_edge_borders smart
 
 
@@ -82,7 +79,7 @@ hide_edge_borders smart
 bindsym --release $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym --release $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
@@ -91,6 +88,10 @@ bindsym $mod+Shift+q kill
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec --no-startup-id rofi -show
+bindsym $mod+Shift+x exec systemctl poweroff -i
+bindsym $mod+n exec networkmanager_dmenu
+bindsym $mod+z exec $lock
+bindsym $mod+Shift+z exec $lock && systemctl suspend
 
 # change focus
 bindsym $mod+$left  focus left
@@ -236,7 +237,6 @@ bindsym --release XF86Bluetooth exec --no-startup-id \
 # Rofi Menu
 bindsym $mod+Shift+s exec rofigen ~/dotfiles/rofi_scripts/system_power.sh
 bindsym $mod+Shift+a exec rofigen ~/dotfiles/rofi_scripts/laptop_menu.sh
-bindsym $mod+Shift+z exec systemctl suspend
 
 # use window title, but no border
 #bindsym $mod+t border normal 0
@@ -255,7 +255,7 @@ bar {
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
-    height $height
+    height 25
     colors {
         statusline         $white
         background         $darkblack
@@ -272,12 +272,11 @@ bar {
 
 # AUTOSTART
 #exec_always bash $HOME/.screenlayout/layout.sh
-#exec --no-startup-id light-locker &
 exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --pos 0x0 --rotate normal --rate 144
 exec --no-startup-id synclient VertScrollDelta=-150 HorizTwoFingerScroll=1 HorizScrollDelta=-150 &
 exec --no-startup-id wal -R &
 exec --no-startup-id unclutter -idle 3 &
 exec --no-startup-id compton -b &
 exec --no-startup-id redshift &
-exec_always --no-startup-id feh --bg-fill $HOME/Pictures/wallpaper &
+exec_always --no-startup-id feh --bg-fill $wallpaper &
 exec nm-applet &

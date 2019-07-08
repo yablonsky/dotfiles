@@ -8,6 +8,7 @@ echo "Linking shell dotfiles"
 ln -sf "$DOTFILES/shell/.bashrc" "$HOME/.bashrc"
 ln -sf "$DOTFILES/shell/.inputrc" "$HOME/.inputrc"
 ln -sf "$DOTFILES/shell/.editrc" "$HOME/.editrc"
+ln -sf "$DOTFILES/shell/.bash_profile" "$HOME/.bash_profile"
 
 echo "Linking gitconfig"
 ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
@@ -15,8 +16,9 @@ ln -sf "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 echo "Linking Bash-Powerline"
 ln -sf "$DOTFILES/shell/.bash-powerline.sh" "$HOME/.bash-powerline.sh"
 
-echo "Linking .xprofile"
+echo "Linking X configs"
 ln -sf "$DOTFILES/X/.xprofile" "$HOME/.xprofile"
+ln -sf "$DOTFILES/X/.xinitrc" "$HOME/.xinitrc"
 
 echo "Linking i3 config"
 ln -sf -T "$DOTFILES/config/i3" "$HOME/.config/i3"
