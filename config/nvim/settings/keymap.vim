@@ -8,11 +8,11 @@
 "Leader
 let mapleader = "\<Space>"
 
-nmap <leader>q :q<CR>
-nmap <leader>Q :qa<CR>
-nmap <leader>w :w<CR>
-nmap <leader>W :w !sudo tee %<CR>
-nmap <leader>x :x<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>Q :qa<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>W :w !sudo tee %<CR>
+nnoremap <leader>x :x<CR>
 
 nnoremap n nzz
 nnoremap N Nzz
@@ -22,6 +22,10 @@ nnoremap <A-j> <c-w>j
 nnoremap <A-k> <c-w>k
 nnoremap <A-l> <c-w>l
 nnoremap <A-h> <c-w>h
+nnoremap <A-y> "+yy
+nnoremap <A-m> "+mm
+nnoremap <A-p> "+p
+nnoremap <A-S-p> "+P
 tnoremap <A-[> <C-\><C-n>
 tnoremap <A-j> <c-\><c-n><c-w>j
 tnoremap <A-k> <c-\><c-n><c-w>k
@@ -30,17 +34,14 @@ tnoremap <A-h> <c-\><c-n><c-w>h
 tnoremap <A-p> <c-\><c-n>pa
 
 "BufMRU
-map <Tab> :BufMRUNext<CR>
-map <S-Tab> :BufMRUPrev<CR>
+nnoremap <Tab> :BufMRUNext<CR>
+nnoremap <S-Tab> :BufMRUPrev<CR>
 
 "vim-test
-nmap <silent> <leader>tn :TestNearest<CR>
-nmap <silent> <leader>tf :TestFile<CR>
-nmap <silent> <leader>ts :TestSuite<CR>
-nmap <silent> <leader>tl :TestLast<CR>
-nmap <silent> <leader>tg :TestVisit<CR>
+nnoremap <silent> <leader>tn :TestNearest<CR>
+nnoremap <silent> <leader>tf :TestFile<CR>
 
-nmap <leader>t? :map <leader>t<CR>
+nnoremap <leader>t? :map <leader>t<CR>
 
 
 " Fugitive mapping
