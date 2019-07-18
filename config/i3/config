@@ -166,6 +166,7 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
+bindsym $mod+Shift+grave move container to workspace $extra_ws
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -279,6 +280,5 @@ exec --no-startup-id wal -R &
 exec --no-startup-id unclutter -idle 3 &
 exec --no-startup-id compton -b &
 exec --no-startup-id redshift &
-exec_always --no-startup-id feh --bg-fill $wallpaper &
-exec bash $HOME/.screenlayout/dual_layout.sh
+exec --no-startup-id bash $HOME/.screenlayout/layout.sh $wallpaper &
 exec nm-applet &
