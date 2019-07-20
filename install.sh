@@ -4,13 +4,13 @@ set -euo pipefail
 DOTFILES=$(pwd)
 
 function install_prompt() {
-  read -p "Install $1 [Y/n]? " answer
-  if [[ -z "$answer" || "$answer" == [Yy]* ]]; then
-    echo "Installing $1"
-    return 0
-  else
+  read -p "Install $1 [y/N]? " answer
+  if [[ -z "$answer" || "$answer" == [Nn]* ]]; then
     echo "Skipping $1"
     return 1
+  else
+    echo "Installing $1"
+    return 0
   fi
 }
 
@@ -116,4 +116,8 @@ if install_prompt "Sway"; then
   echo "Linking sway config"
   ln -sfv -T "$DOTFILES/config/sway" "$HOME/.config/sway"
   ln -sfv -T "$DOTFILES/config/swaylock" "$HOME/.config/swaylock"
+fi
+
+if install_prompt "WayBar"; then
+  ln -sfv -T "$DOTFILES/config/waybar" "$HOME/.config/waybar"
 fi
