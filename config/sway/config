@@ -12,8 +12,7 @@ set $term alacritty
 # Note: it's recommended that you pass the final command to sway
 set $menu rofi -show
 set $wallpaper ~/Pictures/wallpaper
-set $wallpaper_blur ~/Pictures/wallpaper_blur
-set $lock swaylock -i $wallpaper_blur
+set $lock swaylock -i ~/Pictures/wallpaper_blur
 
 set $notification_timeout 5000
 
