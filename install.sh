@@ -86,6 +86,10 @@ if install_prompt "neovim"; then
   fi
 fi
 
+if install_prompt "SpaceVim"; then
+  ln -s -T "$DOTFILES/config/SpaceVim" "$HOME/.SpaceVim.d"
+fi
+
 if install_prompt "pywal"; then
   echo "Linking pywal config"
   ln -sfv "$HOME/.cache/wal/colors.Xresources" "$HOME/.Xresources"
