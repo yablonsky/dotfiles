@@ -50,23 +50,23 @@ markup=pango
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
+#[iface]
 #IFACE=wlan0
-label=
-color=#00FF00
-interval=10
-separator=false
+#label=
+#color=#00FF00
+#interval=10
+#separator=false
 
-[wifi]
+#[wifi]
 #INTERFACE=wlp3s0
-label=
-interval=10
-separator=false
+#label=
+#interval=10
+#separator=false
 
-[bandwidth]
-command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME -i  -o 
+#[bandwidth]
+#command=$SCRIPT_DIR/$BLOCK_NAME/$BLOCK_NAME -i  -o 
 #INTERFACE=eth0
-interval=5
+#interval=5
 
 # Memory usage
 #
@@ -149,8 +149,8 @@ signal=1
 
 [backlight]
 label=
-command=echo "$(xbacklight -get)%"
-interval=5
+command=echo "$(light -G | sed 's/.00//')%"
+interval=1
 
 [battery2]
 markup=pango
@@ -159,9 +159,9 @@ interval=30
 # Date Time
 #
 [time]
-label=
+#label=
 command=date '+%Y-%m-%d %H:%M:%S'
-interval=5
+interval=1
 
 # Generic media player support
 #
