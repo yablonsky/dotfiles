@@ -7,10 +7,7 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+    background-color: #3e4452;
 }
 
 window#waybar.hidden {
@@ -26,11 +23,11 @@ window#waybar.solo {
 }
 */
 
-window#waybar.termite {
+window#waybar.alactritty {
     background-color: #3F3F3F;
 }
 
-window#waybar.chromium {
+window#waybar.brave {
     background-color: #000000;
     border: none;
 }
@@ -39,6 +36,7 @@ window#waybar.chromium {
     border: none;
     background: transparent;
     padding: 0 5px;
+    color: #abb2bf;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -46,11 +44,12 @@ window#waybar.chromium {
 }
 
 #workspaces button.focused {
-    background-color: rgba(110, 110, 110, 0.5);
+    background-color: #282c34;
+    color: #61afef;
 }
 
 #workspaces button.urgent {
-    background-color: rgba(250, 110, 110, 0.5);
+    background-color: #be5046;
 }
 
 #mode {
@@ -68,23 +67,28 @@ window#waybar.chromium {
 #custom-media,
 #tray,
 #mode,
+#mpd,
 #idle_inhibitor {
     padding: 0 10px;
     margin: 0 4px;
-    color: #ffffff;
-    background-color: rgba(110, 110, 110, 0.5);
+    color: #98c379;
+    background-color: #282c34;
 }
 
 #clock {
+    color: #abb2bf;
 }
 
 #battery {
+    color: #abb2bf;
 }
 
 #battery.charging {
+    color: #98c379;
 }
 
 #battery.critical:not(.charging) {
+    color: #be5046;
 }
 
 label:focus {
@@ -103,12 +107,15 @@ label:focus {
 }
 
 #network.disconnected {
+    color: #be5046;
 }
 
 #pulseaudio {
+    color: #98c379;
 }
 
 #pulseaudio.muted {
+    color: #be5046;
 }
 
 #custom-media {
@@ -126,27 +133,30 @@ label:focus {
 }
 
 #temperature.critical {
+    color: #be5046;
 }
 
 #tray {
 }
 
 #idle_inhibitor {
+    color: #be5046;
 }
 
 #idle_inhibitor.activated {
-    color: #2d3436;
+    color: #98c379;
 }
 
 #mpd {
-    color: #2a5c45;
 }
 
 #mpd.disconnected {
+    color: #be5046;
 }
 
 #mpd.stopped {
 }
 
 #mpd.paused {
+    color: #e5c07b;
 }

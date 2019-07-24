@@ -14,6 +14,15 @@ set $menu rofi -show
 set $wallpaper ~/Pictures/wallpaper
 set $lock swaylock -i ~/Pictures/wallpaper_blur
 
+# Colors
+set $black #282c34
+set $red #e06c75
+set $green #98c379
+set $yellow #e5c07b
+set $blue #61afef
+set $magenta #c678dd
+set $cyan #56b6c2
+
 set $notification_timeout 5000
 
 ### Output configuration
@@ -69,24 +78,9 @@ set $notification_timeout 5000
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
-#    bar {
-#        position top
-#
-#        # When the status_command prints a new line to stdout, swaybar updates.
-#        # The default just shows the current date and time.
-#        status_command while date +'%Y-%m-%d %l:%M %p'; do sleep 60; done
-#
-#        colors {
-#            statusline #ffffff
-#            background #323232
-#            inactive_workspace #32323200 #32323200 #5c5c5c
-#        }
-#    }
-
-bar {
-    swaybar_command waybar
-}
+    bar {
+        swaybar_command waybar
+    }
 
 #
 # Window Borders
@@ -95,6 +89,11 @@ bar {
     default_floating_border normal
     smart_borders on
 	  focus_follows_mouse no
+    client.focused $blue $blue $black $magenta $blue
+    # client.focused_inactive #
+    # client.unfocused #
+    # client.placeholder #
+    # client.urgent #
 
 # 
 # Misc.
