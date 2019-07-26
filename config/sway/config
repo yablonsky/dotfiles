@@ -114,6 +114,7 @@ set $notification_timeout 5000
 ### Autostart
 #
     exec mako
+    exec nm-applet
 
 
 #bindswitch lid:on output eDP-1 disable
