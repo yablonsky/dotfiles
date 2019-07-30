@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces"],
     // "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "network", "cpu", "memory", "temperature", "pulseaudio", "backlight", "battery", "clock"],
+    "modules-right": ["mpd", "idle_inhibitor", "network", "custom/disk", "memory", "cpu", "temperature", "pulseaudio", "backlight", "battery", "clock"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -140,5 +140,10 @@
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+    },
+    "custom/disk": {
+        "interval": 60,
+        "format": "{} ",
+        "exec": "df --output=\"pcent\" -h / | tail -n 1"
     }
 }
