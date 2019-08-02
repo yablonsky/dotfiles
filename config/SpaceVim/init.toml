@@ -32,13 +32,15 @@
     # bootstrap_before = 'myspacevim#before'
     bootstrap_after = 'myspacevim#after'
 
-# Enable autocomplete layer
 [[layers]]
   name = 'autocomplete'
 
 [[layers]]
+  name = 'checkers'
+
+[[layers]]
   name = 'shell'
-  default_position = 'top'
+  default_position = 'bottom'
   default_height = 30
 
 [[layers]]
@@ -52,6 +54,8 @@
 
 [[layers]]
   name = 'test'
+  [layers.override_config]
+    python_runner = 'pytest'
 
 [[layers]]
   name = 'incsearch'
