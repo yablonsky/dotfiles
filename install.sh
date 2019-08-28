@@ -2,8 +2,12 @@
 set -euo pipefail
 
 DOTFILES=$(pwd)
+MODULE="${1:-all}"
 
 function install_prompt() {
+  if [[ $MODULE != "all" && $MODULE != $1 ]]; then
+    return 1
+  fi
   read -p "Install $1 [y/N]? " answer
   if [[ -z "$answer" || "$answer" == [Nn]* ]]; then
     echo "Skipping $1"
