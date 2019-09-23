@@ -1,7 +1,7 @@
 background-color=#282c34
-border-color=#61afef
+border-color=#98c379
 text-color=#abb2bf
 width=400
 height=150
-margin=25
-max-icon-size=32
+margin=30
+max-icon-size=48
