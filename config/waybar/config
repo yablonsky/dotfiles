@@ -27,6 +27,7 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "mpd": {
+        "tooltip": false,
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
@@ -48,11 +49,10 @@
         "state-icons": {
             "paused": "",
             "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+        }
     },
     "idle_inhibitor": {
+        "tooltip": false,
         "format": "{icon}",
         "format-icons": {
             "activated": "",
@@ -64,7 +64,7 @@
         "spacing": 10
     },
     "clock": {
-        "tooltip-format": "{:%Y-%m-%d | %H:%M}",
+        "tooltip": false,
         "format": "{:%Y-%m-%d %H:%M}"
     },
     "cpu": {
@@ -72,9 +72,11 @@
         "tooltip": false
     },
     "memory": {
+        "tooltip": false,
         "format": "{}% "
     },
     "temperature": {
+        "tooltip": false,
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
@@ -83,11 +85,13 @@
         "format-icons": ["", "", ""]
     },
     "backlight": {
+        "tooltip": false,
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", ""]
     },
     "battery": {
+        "tooltip": false,
         "states": {
             // "good": 95,
             "warning": 30,
@@ -105,6 +109,7 @@
         "bat": "BAT2"
     },
     "network": {
+        "tooltip": false,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
@@ -113,6 +118,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
+        "tooltip": false,
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -131,6 +137,7 @@
         "on-click": "pavucontrol"
     },
     "custom/media": {
+        "tooltip": false,
         "format": "{icon} {}",
         "return-type": "json",
         "max-length": 40,
@@ -142,6 +149,7 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
     },
     "custom/disk": {
+        "tooltip": false,
         "interval": 60,
         "format": "{} ",
         "exec": "df --output=\"pcent\" -h / | tail -n 1"

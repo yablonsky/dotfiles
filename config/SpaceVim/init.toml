@@ -67,6 +67,9 @@
   name = 'lang#python'
 
 [[layers]]
+  name = 'lang#ruby'
+
+[[layers]]
   name = 'fzf'
 
 [[layers]]

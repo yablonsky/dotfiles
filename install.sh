@@ -129,3 +129,6 @@ fi
 if install_prompt "WayBar"; then
   ln -sfv -T "$DOTFILES/config/waybar" "$HOME/.config/waybar"
 fi
+if install_prompt "Mako"; then
+  ln -sfv -T "$DOTFILES/config/mako" "$HOME/.config/mako"
+fi
