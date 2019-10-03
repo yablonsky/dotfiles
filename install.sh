@@ -18,7 +18,7 @@ function install_prompt() {
   fi
 }
 
-if install_prompt "Shell"; then
+if install_prompt "shell"; then
   echo "Linking shell dotfiles"
   ln -sfv "$DOTFILES/shell/.bashrc" "$HOME/.bashrc"
   ln -sfv "$DOTFILES/shell/.inputrc" "$HOME/.inputrc"
@@ -120,15 +120,15 @@ if install_prompt "gtk"; then
   ln -sfv "$DOTFILES/config/gtk-3.0/settings.ini" "$HOME/.config/gtk-3.0/settings.ini"
 fi
 
-if install_prompt "Sway"; then
+if install_prompt "sway"; then
   echo "Linking sway config"
   ln -sfv -T "$DOTFILES/config/sway" "$HOME/.config/sway"
   ln -sfv -T "$DOTFILES/config/swaylock" "$HOME/.config/swaylock"
 fi
 
-if install_prompt "WayBar"; then
+if install_prompt "waybar"; then
   ln -sfv -T "$DOTFILES/config/waybar" "$HOME/.config/waybar"
 fi
-if install_prompt "Mako"; then
+if install_prompt "mako"; then
   ln -sfv -T "$DOTFILES/config/mako" "$HOME/.config/mako"
 fi
