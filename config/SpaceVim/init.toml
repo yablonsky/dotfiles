@@ -40,8 +40,7 @@
 
 [[layers]]
   name = 'shell'
-  default_position = 'bottom'
-  default_height = 30
+  default_position = 'right'
 
 [[layers]]
   name = 'colorscheme'
