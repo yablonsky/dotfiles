@@ -8,6 +8,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'svermeulen/vim-easyclip'
+Plug 'kassio/neoterm'
 
 Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neoinclude.vim'
