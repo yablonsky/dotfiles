@@ -38,11 +38,15 @@ nnoremap <Tab> :BufMRUNext<CR>
 nnoremap <S-Tab> :BufMRUPrev<CR>
 
 "vim-test
-nnoremap <silent> <leader>tn :TestNearest<CR>
-nnoremap <silent> <leader>tf :TestFile<CR>
+nnoremap <silent> <leader>sn :TestNearest<CR>
+nnoremap <silent> <leader>sf :TestFile<CR>
+nnoremap <leader>s? :map <leader>s<CR>
 
+"neoterm
+nnoremap <leader>tt :Tnew<CR>
+nnoremap <leader>tv :vertical Tnew<CR>
+nnoremap <leader>th :horizontal Tnew<CR>
 nnoremap <leader>t? :map <leader>t<CR>
-
 
 " Fugitive mapping
 nmap <leader>ge :Gedit<cr>
