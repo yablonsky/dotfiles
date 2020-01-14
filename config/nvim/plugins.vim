@@ -9,6 +9,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'svermeulen/vim-easyclip'
 Plug 'kassio/neoterm'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neoinclude.vim'
@@ -23,9 +24,10 @@ Plug 'plytophogy/vim-virtualenv'
 
 Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'luochen1990/rainbow'
+"Plug 'luochen1990/rainbow'
 
 Plug 'dylanaraps/wal.vim'
 

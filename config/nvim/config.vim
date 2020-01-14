@@ -5,7 +5,7 @@ set showmode
 set gcr=a:blinkon0
 set visualbell
 set autoread
-"set clipboard=unnamed
+set clipboard=
 set backspace=indent,eol,start
 set title
 set lazyredraw
