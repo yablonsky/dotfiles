@@ -4,7 +4,7 @@ set encoding=utf-8
 set splitbelow
 set splitright
 set termguicolors
-colorscheme minimalist
+colorscheme onedark
 set background=dark
 set updatetime=250
 
