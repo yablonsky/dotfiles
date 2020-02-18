@@ -29,6 +29,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'luochen1990/rainbow'
 
-Plug 'dylanaraps/wal.vim'
+"Plug 'dylanaraps/wal.vim'
 
 call plug#end()
