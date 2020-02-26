@@ -23,8 +23,9 @@ nnoremap <A-k> <c-w>k
 nnoremap <A-l> <c-w>l
 nnoremap <A-h> <c-w>h
 nnoremap <A-y> "+yy
-nnoremap <A-m> "+mm
+vnoremap <A-y> "+y
 nnoremap <A-p> "+p
+vnoremap <A-p> "+p
 nnoremap <A-S-p> "+P
 tnoremap <A-[> <C-\><C-n>
 tnoremap <A-j> <c-\><c-n><c-w>j
@@ -48,7 +49,7 @@ nnoremap <leader>tv :vertical Tnew<CR>
 nnoremap <leader>th :horizontal Tnew<CR>
 nnoremap <leader>t? :map <leader>t<CR>
 
-" Fugitive mapping
+" Fugitive + GitGutter mapping
 nmap <leader>ge :Gedit<cr>
 nmap <leader>gr :Gread<cr>
 nmap <leader>gR :Gremove<cr>
@@ -69,7 +70,7 @@ nmap <leader>gu :Gpush<cr>
 nmap <leader>gU :Gpushu<cr>
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gW :Gbrowse<cr>
-
+nnoremap <leader>gn :GitGutterQuickFix<CR> :cw<CR>
 nmap <leader>g? :map <leader>g<CR>
 
 
