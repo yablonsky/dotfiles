@@ -75,7 +75,8 @@ nmap <leader>g? :map <leader>g<CR>
 
 
 "fzf
-nmap <leader>e :FZF<CR>
+nmap <leader>e :Files<CR>
+nmap <leader>E :GFiles<CR>
 nmap <leader>r :History<CR>
 nmap <leader>a :FZFBr<CR>
 nmap <leader>A :FZFBrRemote<CR>
