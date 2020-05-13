@@ -22,6 +22,10 @@ nnoremap <A-j> <c-w>j
 nnoremap <A-k> <c-w>k
 nnoremap <A-l> <c-w>l
 nnoremap <A-h> <c-w>h
+nnoremap <A-J> <c-w>J
+nnoremap <A-K> <c-w>K
+nnoremap <A-L> <c-w>L
+nnoremap <A-H> <c-w>H
 nnoremap <A-y> "+yy
 vnoremap <A-y> "+y
 nnoremap <A-p> "+p
@@ -32,6 +36,10 @@ tnoremap <A-j> <c-\><c-n><c-w>j
 tnoremap <A-k> <c-\><c-n><c-w>k
 tnoremap <A-l> <c-\><c-n><c-w>l
 tnoremap <A-h> <c-\><c-n><c-w>h
+tnoremap <A-J> <c-\><c-n><c-w>J
+tnoremap <A-K> <c-\><c-n><c-w>K
+tnoremap <A-L> <c-\><c-n><c-w>L
+tnoremap <A-H> <c-\><c-n><c-w>H
 tnoremap <A-p> <c-\><c-n>pa
 
 "BufMRU
@@ -45,8 +53,12 @@ nnoremap <leader>s? :map <leader>s<CR>
 
 "neoterm
 nnoremap <leader>tt :Tnew<CR>
+nnoremap <leader>to :Topen<CR>
+nnoremap <leader>tc :Tclose<CR>
+nnoremap <leader>tsf :TREPLSendFile<CR>
+nnoremap <leader>tsl :TREPLSendLine<CR>
+vnoremap <leader>tss :TREPLSendSelection<CR>
 nnoremap <leader>tv :vertical Tnew<CR>
-nnoremap <leader>th :horizontal Tnew<CR>
 nnoremap <leader>t? :map <leader>t<CR>
 
 " Fugitive + GitGutter mapping
