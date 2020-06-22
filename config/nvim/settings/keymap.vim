@@ -42,10 +42,6 @@ tnoremap <A-L> <c-\><c-n><c-w>L
 tnoremap <A-H> <c-\><c-n><c-w>H
 tnoremap <A-p> <c-\><c-n>pa
 
-"BufMRU
-nnoremap <Tab> :BufMRUNext<CR>
-nnoremap <S-Tab> :BufMRUPrev<CR>
-
 "vim-test
 nnoremap <silent> <leader>sn :TestNearest<CR>
 nnoremap <silent> <leader>sf :TestFile<CR>
@@ -89,12 +85,12 @@ nmap <leader>g? :map <leader>g<CR>
 "fzf
 nmap <leader>e :Files<CR>
 nmap <leader>E :GFiles<CR>
-nmap <leader>r :History<CR>
+nmap <leader>d :Buffers<CR>
 nmap <leader>a :FZFBr<CR>
 nmap <leader>A :FZFBrRemote<CR>
-nmap <leader>s :History:<CR>
-nmap <leader>f :FZFCdRelative<CR>
-nmap <leader>F :FZFCd<CR>
+nmap <leader>r :History:<CR>
+"nmap <leader>f :FZFCdRelative<CR>
+"nmap <leader>F :FZFCd<CR>
 
 "ripgrep
 nmap <leader>v :Rg <C-R><C-W><CR>
