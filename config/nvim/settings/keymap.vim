@@ -85,10 +85,11 @@ nmap <leader>g? :map <leader>g<CR>
 "fzf
 nmap <leader>e :Files<CR>
 nmap <leader>E :GFiles<CR>
-nmap <leader>d :Buffers<CR>
+nmap <leader>f :Buffers<CR>
 nmap <leader>a :FZFBr<CR>
 nmap <leader>A :FZFBrRemote<CR>
-nmap <leader>r :History:<CR>
+nmap <leader>r :History<CR>
+nmap <leader>R :History:<CR>
 "nmap <leader>f :FZFCdRelative<CR>
 "nmap <leader>F :FZFCd<CR>
 

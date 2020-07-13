@@ -17,7 +17,7 @@ Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'davidhalter/jedi-vim'
 
 Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 
