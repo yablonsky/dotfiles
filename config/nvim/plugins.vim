@@ -11,15 +11,12 @@ Plug 'kassio/neoterm'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neoinclude.vim'
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 Plug 'dense-analysis/ale'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-
-Plug 'davidhalter/jedi-vim'
-
-Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'vim-airline/vim-airline'
