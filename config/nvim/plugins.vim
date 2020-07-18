@@ -16,7 +16,7 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
 Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 Plug 'dense-analysis/ale'
-Plug 'janko-m/vim-test'
+Plug 'vim-test/vim-test'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
