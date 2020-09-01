@@ -17,7 +17,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 Plug 'dense-analysis/ale'
 Plug 'vim-test/vim-test'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'rafi/awesome-vim-colorschemes'
