@@ -53,9 +53,7 @@ set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.pyc
 
 " Scrolling
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
-set sidescrolloff=15
-set sidescroll=1
+set scrolloff=5
 
 " Search
 set incsearch
