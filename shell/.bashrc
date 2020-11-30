@@ -41,3 +41,5 @@ source ~/.bash-powerline.sh
 
 [ -f "$HOME/.bash_vars.sh" ] && . "$HOME/.bash_vars.sh"
 [ -f "$HOME/.bash_alias.sh" ] && . "$HOME/.bash_alias.sh"
+
+source ~/dev/peloton/saml2aws.sh
