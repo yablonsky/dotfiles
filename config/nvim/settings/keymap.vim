@@ -96,3 +96,6 @@ nmap <leader>R :History:<CR>
 "ripgrep
 nmap <leader>v :Rg <C-R><C-W><CR>
 nmap <leader>c :Rg \W<C-R><C-W>\W<CR>
+
+"Auto-pair
+let g:AutoPairsShortcutToggle = '<leader>pp'
