@@ -27,6 +27,7 @@ export PATH="$PATH:$HOME/.local/bin"
 alias ls='ls --color=auto'
 alias la='ls -lah --color=auto'
 alias grep='grep --color=auto'
+alias dc="docker-compose"
 
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
@@ -38,8 +39,5 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 source ~/.bash-powerline.sh
-
-[ -f "$HOME/.bash_vars.sh" ] && . "$HOME/.bash_vars.sh"
-[ -f "$HOME/.bash_alias.sh" ] && . "$HOME/.bash_alias.sh"
-
-source ~/dev/peloton/saml2aws.sh
+source ~/dev/yablonsky/peloton/api/shell/saml2aws.sh
+source ~/dev/yablonsky/peloton/api/shell/docker_alias.sh
