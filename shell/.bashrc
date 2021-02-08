@@ -26,7 +26,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 alias ls='ls --color=auto'
 alias la='ls -lah --color=auto'
-alias lt='ls -ltch --color=auto'
+alias lt='ls -latch --color=auto'
 alias grep='grep --color=auto'
 alias dc="docker-compose"
 
