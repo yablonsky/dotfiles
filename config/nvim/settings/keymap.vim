@@ -63,11 +63,11 @@ nmap <leader>gr :Gread<cr>
 nmap <leader>gR :Gremove<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gb :Gblame<cr>
-nmap <leader>gB :Git co -b 
+nmap <leader>gB :Git co -b
 nmap <leader>gc :Gcommit<cr>
-nmap <leader>gC :Git co 
+nmap <leader>gC :Git co
 nmap <leader>gd :Gdiff<cr>
-nmap <leader>gg :Ggrep 
+nmap <leader>gg :Ggrep
 nmap <leader>gG :Ggrep "\W<cword>\W"<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gf :Gfetch<cr>
@@ -98,4 +98,4 @@ nmap <leader>v :Rg <C-R><C-W><CR>
 nmap <leader>c :Rg \W<C-R><C-W>\W<CR>
 
 "Auto-pair
-let g:AutoPairsShortcutToggle = '<leader>pp'
+"let g:AutoPairsShortcutToggle = '<leader>pp'

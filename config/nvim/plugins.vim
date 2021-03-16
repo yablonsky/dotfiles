@@ -9,7 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'svermeulen/vim-easyclip'
 Plug 'kassio/neoterm'
 Plug 'airblade/vim-gitgutter'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-jedi'
