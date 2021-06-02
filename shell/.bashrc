@@ -21,6 +21,7 @@ export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export TERMINAL=/usr/bin/alacritty
 export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+export DOCKER_BUILDKIT=1
 
 export PATH="$PATH:$HOME/.local/bin"
 
