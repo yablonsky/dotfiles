@@ -60,24 +60,24 @@ nnoremap <leader>t? :map <leader>t<CR>
 " Fugitive + GitGutter mapping
 nmap <leader>ge :Gedit<cr>
 nmap <leader>gr :Gread<cr>
-nmap <leader>gR :Gremove<cr>
+nmap <leader>gR :GRemove<cr>
 nmap <leader>gw :Gwrite<cr>
-nmap <leader>gb :Gblame<cr>
+nmap <leader>gb :Git_blame<cr>
 nmap <leader>gB :Git co -b
-nmap <leader>gc :Gcommit<cr>
+nmap <leader>gc :Git commit<cr>
 nmap <leader>gC :Git co
-nmap <leader>gd :Gdiff<cr>
+nmap <leader>gd :Gdiffsplit<cr>
 nmap <leader>gg :Ggrep
 nmap <leader>gG :Ggrep "\W<cword>\W"<cr>
-nmap <leader>gl :Glog<cr>
-nmap <leader>gf :Gfetch<cr>
-nmap <leader>gp :Gpull<cr>
+nmap <leader>gl :Gclog<cr>
+nmap <leader>gf :Git fetch<cr>
+nmap <leader>gp :Git pull<cr>
 nmap <leader>gm :Git master<cr>
-nmap <leader>gM :Gpull origin master<cr>
-nmap <leader>gu :Gpush<cr>
+nmap <leader>gM :Git pull origin master<cr>
+nmap <leader>gu :Git push<cr>
 nmap <leader>gU :Gpushu<cr>
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>gW :Gbrowse<cr>
+nmap <leader>gs :Git<cr>
+nmap <leader>gW :GBrowse<cr>
 nnoremap <leader>gn :GitGutterQuickFix<CR> :cw<CR>
 nmap <leader>g? :map <leader>g<CR>
 

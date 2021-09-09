@@ -20,6 +20,7 @@ Plug 'dense-analysis/ale'
 Plug 'vim-test/vim-test'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'udalov/kotlin-vim'
 
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'vim-airline/vim-airline'
