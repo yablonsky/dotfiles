@@ -1,5 +1,11 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'neovim/nvim-lspconfig'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
