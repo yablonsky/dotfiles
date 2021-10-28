@@ -1,7 +1,7 @@
-autocmd BufReadPost *.kt setlocal filetype=kotlin
-
 let g:LanguageClient_serverCommands = {
     \ 'kotlin': ["kotlin-language-server"],
+    \ 'javascript': ["javascript-typescript-stdio"],
+    \ 'typescript': ["javascript-typescript-stdio"],
     \ }
 
 function LC_maps()
