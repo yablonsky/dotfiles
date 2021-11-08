@@ -1,7 +1,7 @@
 let g:LanguageClient_serverCommands = {
     \ 'kotlin': ["kotlin-language-server"],
-    \ 'javascript': ["javascript-typescript-stdio"],
-    \ 'typescript': ["javascript-typescript-stdio"],
+    \ 'javascript': ["typescript-language-server", "--stdio"],
+    \ 'typescript': ["typescript-language-server", "--stdio"],
     \ }
 
 function LC_maps()
