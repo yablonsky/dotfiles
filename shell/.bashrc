@@ -24,6 +24,7 @@ export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 export DOCKER_BUILDKIT=1
 
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.yarn/bin"
 
 alias ls='ls --color=auto'
 alias la='ls -lah --color=auto'

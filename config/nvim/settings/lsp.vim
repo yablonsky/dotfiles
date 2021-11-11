@@ -1,7 +1,8 @@
 let g:LanguageClient_serverCommands = {
-    \ 'kotlin': ["kotlin-language-server"],
-    \ 'javascript': ["typescript-language-server", "--stdio"],
-    \ 'typescript': ["typescript-language-server", "--stdio"],
+    \ 'kotlin': ['kotlin-language-server'],
+    \ 'javascript': ['typescript-language-server', '--stdio'],
+    \ 'typescript': ['typescript-language-server', '--stdio'],
+    \ 'graphql': ['graphql-lsp', 'server', '-m', 'stream'],
     \ }
 
 function LC_maps()

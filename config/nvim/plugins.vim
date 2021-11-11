@@ -19,14 +19,17 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'jiangmiao/auto-pairs'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'davidhalter/jedi-vim'
-Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
-Plug 'dense-analysis/ale'
+"Plug 'deoplete-plugins/deoplete-jedi'
+"Plug 'davidhalter/jedi-vim'
+"Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
+"Plug 'dense-analysis/ale'
 Plug 'vim-test/vim-test'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'udalov/kotlin-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'jparise/vim-graphql'
 
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'vim-airline/vim-airline'
