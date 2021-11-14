@@ -20,7 +20,7 @@ fi
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export TERMINAL=/usr/bin/alacritty
-export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+export FZF_DEFAULT_COMMAND='rg --hidden --files --no-ignore-vcs'
 export DOCKER_BUILDKIT=1
 
 export PATH="$PATH:$HOME/.local/bin"
@@ -44,3 +44,4 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 source ~/.bash-powerline.sh
 source ~/dev/yablonsky/peloton/api/shell/saml2aws.sh
 source ~/dev/yablonsky/peloton/api/shell/docker_alias.sh
+source <(kubectl completion bash)

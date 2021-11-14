@@ -26,7 +26,7 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 "Plug 'dense-analysis/ale'
 Plug 'vim-test/vim-test'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'udalov/kotlin-vim'
