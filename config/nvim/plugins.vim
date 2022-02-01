@@ -19,6 +19,7 @@ Plug 'svermeulen/vim-easyclip'
 Plug 'kassio/neoterm'
 Plug 'airblade/vim-gitgutter'
 "Plug 'jiangmiao/auto-pairs'
+Plug 'Raimondi/delimitMate'
 
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'deoplete-plugins/deoplete-jedi'
@@ -31,6 +32,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'udalov/kotlin-vim'
 Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 

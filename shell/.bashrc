@@ -45,3 +45,4 @@ source ~/.bash-powerline.sh
 source ~/dev/yablonsky/peloton/api/shell/saml2aws.sh
 source ~/dev/yablonsky/peloton/api/shell/docker_alias.sh
 source <(kubectl completion bash)
+source <(kubectl-argo-rollouts completion bash)
