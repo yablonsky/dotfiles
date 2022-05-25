@@ -11,7 +11,7 @@ __powerline() {
     readonly COLOR_SUCCESS='\[\033[0;32m\]' # green
     readonly COLOR_FAILURE='\[\033[0;31m\]' # red
 
-    readonly SYMBOL_GIT_BRANCH='⑂'
+    readonly SYMBOL_GIT_BRANCH=''
     readonly SYMBOL_GIT_MODIFIED='*'
     readonly SYMBOL_GIT_PUSH='↑'
     readonly SYMBOL_GIT_PULL='↓'

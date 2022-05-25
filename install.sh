@@ -132,3 +132,6 @@ fi
 if install_prompt "mako"; then
   ln -sfv -T "$DOTFILES/config/mako" "$HOME/.config/mako"
 fi
+if install_prompt "fontconfig"; then
+  ln -sfv -T "$DOTFILES/config/fontconfig" "$HOME/.config/fontconfig"
+fi
