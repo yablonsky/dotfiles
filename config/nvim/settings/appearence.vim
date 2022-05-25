@@ -4,7 +4,7 @@ set encoding=utf-8
 set splitbelow
 set splitright
 set termguicolors
-colorscheme onedark
+colorscheme onedarkhc
 set background=dark
 set updatetime=250
 " Give more space for displaying messages.
