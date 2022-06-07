@@ -83,8 +83,8 @@ nmap <leader>g? :map <leader>g<CR>
 
 
 "fzf
-nmap <leader>e :Files<CR>
-nmap <leader>E :GFiles<CR>
+nmap <leader>E :Files<CR>
+nmap <leader>e :GFiles<CR>
 nmap <leader>f :Buffers<CR>
 nmap <leader>a :FZFBr<CR>
 nmap <leader>A :FZFBrRemote<CR>
