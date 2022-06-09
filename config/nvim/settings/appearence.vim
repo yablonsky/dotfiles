@@ -10,13 +10,15 @@ set updatetime=250
 " Give more space for displaying messages.
 " set cmdheight=2
 set signcolumn=number
+let g:onedarkhc_terminal_italics = 1
 
 
 " netrw
-let g:netrw_preview = 1
-let g:netrw_liststyle = 3
-let g:netrw_winsize = 25
-let g:netrw_browse_split = 4
+" let g:netrw_banner = 0
+" " let g:netrw_preview = 1
+" let g:netrw_liststyle = 3
+" let g:netrw_winsize = 25
+" let g:netrw_browse_split = 4
 
 " vim-airline
 "let g:airline_theme='wal'
@@ -40,7 +42,7 @@ lua << END
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'onedark',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
@@ -60,7 +62,9 @@ require('lualine').setup {
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {'filename'},
+    lualine_c = {
+      {'filename', path = 1},
+    },
     lualine_x = {'location'},
     lualine_y = {},
     lualine_z = {}

@@ -46,5 +46,7 @@ Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'pacokwon/onedarkhc.vim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'pablopunk/native-sidebar.vim'
 
 call plug#end()
