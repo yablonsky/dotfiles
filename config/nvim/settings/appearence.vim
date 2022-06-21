@@ -4,14 +4,13 @@ set encoding=utf-8
 set splitbelow
 set splitright
 set termguicolors
-colorscheme onedarkhc
 set background=dark
 set updatetime=250
 " Give more space for displaying messages.
 " set cmdheight=2
 set signcolumn=number
 let g:onedarkhc_terminal_italics = 1
-
+colorscheme onedarkhc
 
 " netrw
 " let g:netrw_banner = 0
