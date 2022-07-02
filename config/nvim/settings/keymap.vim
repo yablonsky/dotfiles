@@ -43,9 +43,9 @@ tnoremap <A-H> <c-\><c-n><c-w>H
 tnoremap <A-p> <c-\><c-n>pa
 
 "vim-test
-nnoremap <silent> <leader>sn :TestNearest<CR>
-nnoremap <silent> <leader>sf :TestFile<CR>
-nnoremap <leader>s? :map <leader>s<CR>
+" nnoremap <silent> <leader>sn :TestNearest<CR>
+" nnoremap <silent> <leader>sf :TestFile<CR>
+" nnoremap <leader>s? :map <leader>s<CR>
 
 "neoterm
 nnoremap <leader>tt :Tnew<CR>
@@ -99,3 +99,6 @@ nmap <leader>c :Rg \W<C-R><C-W>\W<CR>
 
 "Auto-pair
 "let g:AutoPairsShortcutToggle = '<leader>pp'
+
+" Apply AutoFix to problem on the current line.
+" nmap <leader>qf <Plug>(coc-fix-current)
