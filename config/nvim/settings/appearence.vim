@@ -32,9 +32,9 @@ colorscheme onedarkhc
 " fzf
 " let g:fzf_history_dir = '~/.local/share/fzf-history'
 " don't change status when opening fzf
-autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+" autocmd! FileType fzf
+" autocmd  FileType fzf set laststatus=0 noshowmode noruler
+"   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " TODO: move to a separate file
 lua << END
@@ -46,7 +46,7 @@ require('lualine').setup {
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
     always_divide_middle = true,
-    globalstatus = false,
+    globalstatus = true,
   },
   sections = {
     lualine_a = {'mode'},
@@ -56,7 +56,7 @@ require('lualine').setup {
     },
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'diagnostics'},
-    lualine_z = {'progress'}
+    lualine_z = {'location', 'progress'}
   },
   inactive_sections = {
     lualine_a = {},
