@@ -6,11 +6,11 @@
     }
   },
   "coc.preferences.formatOnSaveFiletypes": [
-    //"typescript",
+    "typescript",
     "typescriptreact",
     "javascript",
-    //"yaml"
+    "javascriptreact",
+    "yaml"
   ],
-  "python.linting.pycodestyleEnabled": true,
-  "python.linting.mypyEnabled": true
+  "eslint.autoFixOnSave": true
 }
