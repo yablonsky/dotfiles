@@ -47,6 +47,8 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'pacokwon/onedarkhc.vim'
 Plug 'tomasiser/vim-code-dark'
-Plug 'pablopunk/native-sidebar.vim'
+" Plug 'pablopunk/native-sidebar.vim'
+Plug 'kyazdani42/nvim-tree.lua'
+
 
 call plug#end()
