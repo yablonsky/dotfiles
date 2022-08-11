@@ -132,3 +132,6 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " " Resume latest coc list.
 " nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+"
+" Extensions
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-yaml', 'coc-tsserver', 'coc-prettier', 'coc-eslint', 'coc-pyright']
