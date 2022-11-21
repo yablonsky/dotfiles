@@ -17,6 +17,7 @@ fi
 
 # Put your fun stuff here.
 
+export HISTSIZE=10000
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export TERMINAL=/usr/bin/alacritty
@@ -42,7 +43,4 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 source ~/.bash-powerline.sh
-source ~/dev/yablonsky/peloton/api/shell/saml2aws.sh
-source ~/dev/yablonsky/peloton/api/shell/docker_alias.sh
-source <(kubectl completion bash)
-source <(kubectl-argo-rollouts completion bash)
+source /usr/share/nvm/init-nvm.sh
