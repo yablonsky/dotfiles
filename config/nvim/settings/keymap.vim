@@ -102,3 +102,6 @@ nmap <leader>c :Rg \W<C-R><C-W>\W<CR>
 
 " Apply AutoFix to problem on the current line.
 " nmap <leader>qf <Plug>(coc-fix-current)
+
+" remap add mark due to easyclip plugin
+nnoremap gm m
