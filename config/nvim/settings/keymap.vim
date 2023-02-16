@@ -66,11 +66,11 @@ nmap <leader>gb :Git_blame<cr>
 nmap <leader>gB :Git co -b
 nmap <leader>gc :Git commit<cr>
 nmap <leader>gC :Git co
-nmap <leader>gd :Gdiffsplit<cr>
+" nmap <leader>gd :Gdiffsplit<cr>
 nmap <leader>gg :Ggrep
 nmap <leader>gG :Ggrep "\W<cword>\W"<cr>
 nmap <leader>gl :Gclog<cr>
-nmap <leader>gf :Git fetch<cr>
+nmap <leader>gd :Git fetch<cr>
 nmap <leader>gp :Git pull<cr>
 nmap <leader>gm :Git master<cr>
 nmap <leader>gM :Git pull origin master<cr>
@@ -85,13 +85,13 @@ nmap <leader>g? :map <leader>g<CR>
 "fzf
 nmap <leader>E :Files<CR>
 nmap <leader>e :GFiles<CR>
-nmap <leader>f :Buffers<CR>
+nmap <leader>b :Buffers<CR>
 nmap <leader>a :FZFBr<CR>
 nmap <leader>A :FZFBrRemote<CR>
 nmap <leader>r :History<CR>
 nmap <leader>R :History:<CR>
-"nmap <leader>f :FZFCdRelative<CR>
-"nmap <leader>F :FZFCd<CR>
+nmap <leader>f :NvimTreeFindFile<CR>
+nmap <leader>F :NvimTreeFindFileToggle<CR>
 
 "ripgrep
 nmap <leader>v :Rg <C-R><C-W><CR>
@@ -101,4 +101,4 @@ nmap <leader>c :Rg \W<C-R><C-W>\W<CR>
 "let g:AutoPairsShortcutToggle = '<leader>pp'
 
 " Apply AutoFix to problem on the current line.
-" nmap <leader>qf <Plug>(coc-fix-current)
+nmap <leader>gf <Plug>(coc-fix-current)
