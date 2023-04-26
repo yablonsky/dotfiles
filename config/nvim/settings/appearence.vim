@@ -36,6 +36,7 @@ colorscheme onedarkhc
 " autocmd  FileType fzf set laststatus=0 noshowmode noruler
 "   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
+set laststatus=3
 " TODO: move to a separate file
 lua << END
 require('lualine').setup {
