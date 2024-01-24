@@ -64,7 +64,7 @@ fi
 
 if install_prompt "alacritty"; then
   echo "Linking alacritty config"
-  ln -sfv "$DOTFILES/config/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+  ln -sfv "$DOTFILES/config/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
 fi
 
 if install_prompt "tmux"; then
