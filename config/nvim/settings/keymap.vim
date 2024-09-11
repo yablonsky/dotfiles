@@ -40,7 +40,7 @@ tnoremap <A-J> <c-\><c-n><c-w>J
 tnoremap <A-K> <c-\><c-n><c-w>K
 tnoremap <A-L> <c-\><c-n><c-w>L
 tnoremap <A-H> <c-\><c-n><c-w>H
-tnoremap <A-p> <c-\><c-n>pa
+tnoremap <A-p> <c-\><c-n>"+pa
 
 "vim-test
 " nnoremap <silent> <leader>sn :TestNearest<CR>
