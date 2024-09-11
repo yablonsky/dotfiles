@@ -44,3 +44,7 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 source ~/.bash-powerline.sh
 source /usr/share/nvm/init-nvm.sh
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
