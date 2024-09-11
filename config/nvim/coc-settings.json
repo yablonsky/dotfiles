@@ -12,5 +12,7 @@
     "javascriptreact",
     "yaml"
   ],
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "python.formatting.provider": "black",
+  "python.linting.mypyEnabled": true
 }
