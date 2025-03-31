@@ -105,3 +105,15 @@ nmap <leader>gf <Plug>(coc-fix-current)
 
 " remap add mark due to easyclip plugin
 nnoremap gm m
+
+" m for move (vim-cutlass)
+nnoremap m d
+xnoremap m d
+
+nnoremap mm dd
+nnoremap M D
+
+" s for substitute (vim-substitute)
+nmap s <plug>(SubversiveSubstitute)
+nmap ss <plug>(SubversiveSubstituteLine)
+nmap S <plug>(SubversiveSubstituteToEndOfLine)
