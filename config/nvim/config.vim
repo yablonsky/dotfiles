@@ -63,7 +63,7 @@ set smartcase
 
 " Python
 "let g:python_host_prog  = '/usr/bin/python2'
-"let g:python3_host_prog  = '/usr/bin/python3'
+let g:python3_host_prog  = '/home/and/.pyenv/shims/python'
 
 " Term
 au TermOpen * setlocal nonumber norelativenumber

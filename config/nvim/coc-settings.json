@@ -10,8 +10,12 @@
     "typescriptreact",
     "javascript",
     "javascriptreact",
-    "yaml"
+    "json",
+    "yaml",
+    "python"
   ],
+  "coc.preferences.willSaveHandlerTimeout": 2000,
+  "coc.preferences.formatOnSaveTimeout": 2000,
   "eslint.autoFixOnSave": true,
   "python.formatting.provider": "black",
   "python.linting.mypyEnabled": true
