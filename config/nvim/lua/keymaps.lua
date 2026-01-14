@@ -40,6 +40,11 @@ vim.keymap.set('n', '<leader>gW', ':GBrowse<cr>', opts)
 -- Terminal
 vim.keymap.set('n', '<leader>tt', ':Tnew<CR>', opts)
 vim.keymap.set('n', '<leader>tv', ':vertical Tnew<CR>', opts)
+vim.keymap.set('t', '<A-[>', '<C-\\><C-n>', opts)
+vim.keymap.set('t', '<A-j>', '<c-\\><c-n><c-w>j', opts)
+vim.keymap.set('t', '<A-k>', '<c-\\><c-n><c-w>k', opts)
+vim.keymap.set('t', '<A-l>', '<c-\\><c-n><c-w>l', opts)
+vim.keymap.set('t', '<A-h>', '<c-\\><c-n><c-w>h', opts)
 
 -- remap add mark due to easyclip plugin
 vim.keymap.set('n', 'gm', 'm', opts)

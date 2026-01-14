@@ -38,8 +38,5 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     end
 })
 
--- vim.lsp.enable({ "" })
 vim.lsp.enable('lua_ls')
-vim.lsp.enable('ty')
--- vim.lsp.enable('basedpyright')
--- vim.lsp.enable('pyright')
+vim.lsp.enable('basedpyright')
