@@ -1,12 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Plug 'neovim/nvim-lspconfig'
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash install.sh',
-"     \ }
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
@@ -28,16 +23,16 @@ Plug 'wellle/targets.vim'
 "Plug 'davidhalter/jedi-vim'
 "Plug 'Shougo/deoplete-clangx', { 'for': 'c' }
 "Plug 'dense-analysis/ale'
-Plug 'vim-test/vim-test'
+" Plug 'vim-test/vim-test'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Plug 'udalov/kotlin-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'leafgarland/typescript-vim'
-Plug 'jparise/vim-graphql'
-Plug 'Vimjas/vim-python-pep8-indent'
+" Plug 'pangloss/vim-javascript'
+" Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'jparise/vim-graphql'
+" Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'vim-python/python-syntax'
 
 Plug 'rafi/awesome-vim-colorschemes'

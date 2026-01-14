@@ -18,5 +18,8 @@
   "coc.preferences.formatOnSaveTimeout": 2000,
   "eslint.autoFixOnSave": true,
   "python.formatting.provider": "black",
-  "python.linting.mypyEnabled": true
+  "python.linting.mypyEnabled": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

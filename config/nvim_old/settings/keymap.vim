@@ -88,8 +88,8 @@ nmap <leader>e :GFiles<CR>
 nmap <leader>b :Buffers<CR>
 nmap <leader>a :FZFBr<CR>
 nmap <leader>A :FZFBrRemote<CR>
-nmap <leader>r :History<CR>
-nmap <leader>R :History:<CR>
+nmap <leader>R :History<CR>
+" nmap <leader>R :History:<CR>
 nmap <leader>f :NvimTreeFindFile<CR>
 nmap <leader>F :NvimTreeFindFileToggle<CR>
 
@@ -98,10 +98,7 @@ nmap <leader>v :Rg <C-R><C-W><CR>
 nmap <leader>c :Rg \W<C-R><C-W>\W<CR>
 
 "Auto-pair
-"let g:AutoPairsShortcutToggle = '<leader>pp'
-
-" Apply AutoFix to problem on the current line.
-nmap <leader>gf <Plug>(coc-fix-current)
+let g:AutoPairsShortcutToggle = '<leader>pp'
 
 " remap add mark due to easyclip plugin
 nnoremap gm m
