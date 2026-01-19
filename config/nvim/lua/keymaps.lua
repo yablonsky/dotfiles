@@ -14,6 +14,8 @@ vim.g.maplocalleader = "\\"
 -- Hint: see `:h vim.map.set()`
 
 -- Global
+vim.keymap.set('n', 'n', 'nzz', opts)
+vim.keymap.set('n', 'N', 'Nzz', opts)
 vim.keymap.set('n', '<leader>q', ':q<CR>', opts)
 vim.keymap.set('n', '<leader>Q', ':qa<CR>', opts)
 vim.keymap.set('n', '<leader>w', ':w<CR>', opts)

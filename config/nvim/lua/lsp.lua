@@ -25,6 +25,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         keymap.set('n', '[g', function()
             vim.diagnostic.jump { count = -1, float = true }
         end, {})
+        keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
         -- keymap.set("n", "<leader>f", function()
         --     vim.lsp.buf.format({ async = true })
         -- end, bufopts)
@@ -39,4 +40,6 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 })
 
 vim.lsp.enable('lua_ls')
+vim.lsp.enable('ts_ls')
 vim.lsp.enable('basedpyright')
+vim.lsp.enable('ruff')

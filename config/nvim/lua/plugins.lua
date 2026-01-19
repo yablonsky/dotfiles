@@ -33,13 +33,15 @@ require("lazy").setup({
     -- install = { colorscheme = { "habamax" } },
     -- -- automatically check for plugin updates
     -- checker = { enabled = true },
-    'pacokwon/onedarkhc.vim',
+    'airblade/vim-gitgutter',
     'junegunn/fzf',
     'junegunn/fzf.vim',
     'kassio/neoterm',
     'neovim/nvim-lspconfig',
+    'nvim-lualine/lualine.nvim',
     'nvim-tree/nvim-tree.lua',
     'nvim-tree/nvim-web-devicons',
+    'pacokwon/onedarkhc.vim',
     'svermeulen/vim-cutlass',
     'svermeulen/vim-subversive',
     'tpope/vim-fugitive',
@@ -47,6 +49,11 @@ require("lazy").setup({
     'tpope/vim-sensible',
     'tpope/vim-surround',
     'tpope/vim-unimpaired',
+    {
+        'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        build = ':TSUpdate'
+    },
     {
         'saghen/blink.cmp',
         -- optional: provides snippets for the snippet source
@@ -131,4 +138,11 @@ require("lazy").setup({
     }
 })
 
+require('lualine').setup()
 require("nvim-tree").setup()
+-- require("nvim-treesitter").setup()
+require 'nvim-treesitter'.install { 'typescript', 'javascript', 'python' }
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'python', 'typescript' },
+    callback = function() vim.treesitter.start() end,
+})
